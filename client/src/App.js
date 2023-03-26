@@ -14,6 +14,7 @@ function App() {
   // const handleSearch = (query) => {
   //   setQuery(query);
   // };
+
   return (
     <div className="App">
       <Header />

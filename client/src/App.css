@@ -1,38 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+:root {
+  --font-raleway: "Raleway", sans-serif;
+  --font-roboto: "Roboto Slab", serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-raleway);
+}
+
 .App {
   text-align: center;
+  background-color: #fcf3eb;
+  font-family: var(--font-raleway), var(--font-roboto);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar*/
+
+.my-navbar-container {
+  background-color: #1d1c1b;
+  font-family: var(--font-roboto);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-link-item {
+  background-image: linear-gradient(to right, white, white 50%, #ffffff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  margin: 20px;
+}
+#nav-items {
+  font-size: larger;
+  font-weight: bold;
+}
+.nav-link-item:before {
+  content: "";
+  background: white;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-link-item:hover {
+  background-position: 0;
+}
+
+.nav-link-item:hover::before {
+  width: 100%;
+}
+
+.navbar-brand {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 10px;
+}
+.login-signup-bttns {
+  display: flex;
+  gap: 25px;
+}
+#login-bttn,
+#signup-bttn {
+  background: none;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  border: 0.5px solid #fff;
+  padding: 10px 30px;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#login-bttn:hover,
+#signup-bttn:hover {
+  background-color: rgba(248, 215, 95, 0.61);
+  color: #000000;
+}
+/* Navbar ends */
+
+/* Search bar */
+.search-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ff5757;
+}
+.search-bar {
+  min-width: 25%;
+  margin: 1rem 0;
+  padding: 0.5rem 0.5rem;
+  border-radius: 15px;
+  background: #fefcff;
+  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
 }
 
-.App-link {
-  color: #61dafb;
+.search-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar input {
+  min-width: 25%;
+  flex: 1;
+  border: none;
+  font-size: 1rem;
+  font-family: var(--font-raleway);
+  font-weight: 500;
+  outline: none;
+  color: #2d033b;
 }
+
+.search-bar img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+/* Search ends */

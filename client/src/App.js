@@ -8,8 +8,8 @@ import Categories from "./Components/Categories";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import { useState } from "react";
-import HeroSection from "./Components/HeroSection";
-import CheckList from "./Components/CheckList";
+// import HeroSection from "./Components/HeroSection";
+import CheckListPage from "./Components/CheckListPage";
 
 function App() {
   // const [query, setQuery] = useState("");
@@ -22,8 +22,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <HeroSection />
-      <CheckList userId={userId} />
+      {/* <HeroSection /> */}
+      <CheckListPage userId={userId} />
 
       {/* <Search handleSearch={handleSearch} /> */}
       <Routes>

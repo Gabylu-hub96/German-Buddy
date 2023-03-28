@@ -4,8 +4,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import CheckListCard from "./CheckListCard";
 
-function CheckList({ userId }) {
+function CheckListPage({ userId }) {
   const [checkLists, setCheckLists] = useState([]);
 
   useEffect(() => {
@@ -24,19 +25,12 @@ function CheckList({ userId }) {
 
   return (
     <>
-      <div className="checkList-container">
+      <div className="checkLists">
         {checkLists.map((checkList) => (
-          <div className="checkList">
-            <h1>{checkList.title}</h1>
-            <ul>
-              {checkList.tasks.map((task) => (
-                <li>{task.title}</li>
-              ))}
-            </ul>
-          </div>
+          <CheckListCard checkList={checkList} />
         ))}
       </div>
     </>
   );
 }
-export default CheckList;
+export default CheckListPage;

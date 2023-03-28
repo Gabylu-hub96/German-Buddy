@@ -8,6 +8,8 @@ import Categories from "./Components/Categories";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import { useState } from "react";
+import HeroSection from "./Components/HeroSection";
+import CheckList from "./Components/CheckList";
 
 function App() {
   // const [query, setQuery] = useState("");
@@ -15,13 +17,19 @@ function App() {
   //   setQuery(query);
   // };
 
+  const userId = "64217611aa2b275d366d5c2b";
+
   return (
     <div className="App">
       <Header />
+      <HeroSection />
+      <CheckList userId={userId} />
+
       {/* <Search handleSearch={handleSearch} /> */}
       <Routes>
         {/* <Route path="/search/:query" element={<SearchResults />} /> */}
         {/* <Route path="/login" element={<Auth />} /> */}
+
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/categories" element={<Categories />} />

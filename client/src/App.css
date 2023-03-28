@@ -27,12 +27,18 @@ body {
 /* Navbar*/
 
 .my-navbar-container {
-  background-color: #1d1c1b;
+  background-color: #fcf3eb;
   font-family: var(--font-roboto);
+  border: 3px solid #000000;
 }
 
 .nav-link-item {
-  background-image: linear-gradient(to right, white, white 50%, #ffffff 50%);
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    rgb(0, 0, 0) 50%,
+    #000000 50%
+  );
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
@@ -49,7 +55,7 @@ body {
 }
 .nav-link-item:before {
   content: "";
-  background: white;
+  background: rgb(0, 0, 0);
   display: block;
   position: absolute;
   bottom: -3px;

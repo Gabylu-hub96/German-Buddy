@@ -4,8 +4,8 @@ const CheckListTemplate = require("../models/checkListTemplate");
 
 const getCheckListsForUser = async (req, res, next) => {
   try {
-    const CheckLists = await CheckList.find({ userId: req.params.userId });
-    res.json(CheckLists);
+    const checkLists = await CheckList.find({ userId: req.params.userId });
+    res.json(checkLists);
   } catch (error) {
     next(new ErrorResponse(error));
   }
@@ -19,9 +19,10 @@ const createCheckLists = async (req, res, next) => {
       category: user.category,
     }).lean();
 
-    // TODO: Add userId to each checklist
+    // Add userId to each checklist
     var checklistObjects = checkListTemplates.map((template) => {
       template.userId = user._id;
+      return template;
     });
 
     // foreach checklistTemplate, create a checklist and add it to an array
@@ -36,8 +37,8 @@ const createCheckLists = async (req, res, next) => {
 
 const getAllCheckLists = async (req, res, next) => {
   try {
-    const CheckLists = await CheckList.find();
-    res.json(CheckLists);
+    const checkLists = await CheckList.find();
+    res.json(checkLists);
   } catch (error) {
     next(new ErrorResponse(error));
   }

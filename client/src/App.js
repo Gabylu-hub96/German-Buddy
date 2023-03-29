@@ -8,7 +8,6 @@ import Categories from "./Components/Categories";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import { useState } from "react";
-// import HeroSection from "./Components/HeroSection";
 import CheckListPage from "./Components/CheckListPage";
 
 function App() {

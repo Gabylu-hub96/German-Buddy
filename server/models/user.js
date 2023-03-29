@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
-const userSchema = new mongoose.Schema(
+const UserSchema = new mongoose.Schema(
   {
     role: { type: String, enum: ["ADMIN", "USER"], default: "USER" },
     userName: {
@@ -46,5 +47,29 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const model = mongoose.model("User", userSchema);
-module.exports = model;
+//Virtual field (this will be in the model but not on the DB level)
+// NOT SAVED IN THE DB!
+
+UserSchema.virtual("confirmPassword")
+  .get(() => this._confirmPassword)
+  .set((value) => (this._confirmPassword = value));
+
+UserSchema.pre("validate", function (next) {
+  if (this.password !== this.confirmPassword) {
+    this.invalidate("confirmPassword", "Passwords must match!");
+  }
+  next();
+});
+UserSchema.pre("save", async function (next) {
+  try {
+    const hashedPassword = await bcrypt.hash(this.password, 8);
+    console.log("HASHED PASSWORD", hashedPassword);
+    this.password = hashedPassword;
+    next();
+  } catch (error) {
+    console.log("ERROR", "hashing error");
+    next(error);
+  }
+});
+const User = mongoose.model("User", UserSchema);
+module.exports = User;

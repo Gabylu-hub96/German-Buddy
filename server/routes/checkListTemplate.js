@@ -8,6 +8,8 @@ const {
   deleteCheckListTemplate,
 } = require("../controllers/checkListTemplate");
 const checkListTemplateFinder = require("../middlewares/checkListTemplateFinder");
+const authenticate = require("../middlewares/auth");
+router.use(authenticate);
 router.get("/", getAllCheckListTemplates);
 router.get("/:id", checkListTemplateFinder, getCheckListTemplateById);
 router.get(

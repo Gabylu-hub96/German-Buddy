@@ -1,16 +1,23 @@
 const express = require("express");
 const router = express.Router();
 const {
-  createUser,
+  register,
+  login,
+  logout,
+  getLoggedInUser,
   getAllUsers,
   getUserById,
   updateUser,
   deleteUser,
 } = require("../controllers/user");
 const userFinder = require("../middlewares/userFinder");
+const authenticate = require("../middlewares/auth");
+router.post("/register", register);
+router.post("/login", login);
+router.post("/logout", logout);
+router.get("/loggedin-user", authenticate, getLoggedInUser);
 router.get("/", getAllUsers);
 router.get("/:id", userFinder, getUserById);
-router.post("/", createUser);
 router.put("/:id", userFinder, updateUser);
 router.delete("/:id", userFinder, deleteUser);
 

@@ -1,42 +1,36 @@
 import "./App.css";
-import Header from "./Components/Header";
 import { Routes, Route } from "react-router-dom";
 import Search from "./Components/Search";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Categories from "./Components/Categories";
 import Contact from "./Components/Contact";
-import Footer from "./Components/Footer";
-import { useState } from "react";
+import Login from "./Components/Login";
+import Register from "./Components/Register";
+import Header from "./Components/Header";
 import CheckListPage from "./Components/CheckListPage";
+import { useState } from "react";
 
 function App() {
-  // const [query, setQuery] = useState("");
-  // const handleSearch = (query) => {
-  //   setQuery(query);
-  // };
-
-  const userId = "64217611aa2b275d366d5c2b";
-
+  const [isLoggedin, setIsLoggedin] = useState(false);
   return (
     <div className="App">
-      <Header />
-      {/* <HeroSection /> */}
-      <CheckListPage userId={userId} />
-
-      {/* <Search handleSearch={handleSearch} /> */}
+      <Header isLoggedin={isLoggedin} setIsLoggedin={setIsLoggedin} />
+      {/* <CheckListPage userId={userId} /> */}
       <Routes>
-        {/* <Route path="/search/:query" element={<SearchResults />} /> */}
-        {/* <Route path="/login" element={<Auth />} /> */}
-
         <Route path="/" element={<Home />} />
+        <Route
+          path="/login"
+          element={<Login setIsLoggedin={setIsLoggedin} />}
+        />
+        <Route
+          path="/register"
+          element={<Register setIsLoggedin={setIsLoggedin} />}
+        />
         <Route path="/about" element={<About />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/login" element={<LoginForm />} />
-        <Route path="/signup" element={<SignUpForm />} /> */}
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 }

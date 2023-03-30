@@ -7,9 +7,10 @@ const JWT_SECRET = process.env.JWT_SECRET;
 const register = async (req, res, next) => {
   try {
     const newUser = await User.create(req.body);
+
     const payload = {
       _id: newUser._id,
-      username: newUser.username,
+      userName: newUser.userName,
       email: newUser.email,
     };
     const userToken = jwt.sign(payload, JWT_SECRET);

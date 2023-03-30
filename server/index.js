@@ -4,7 +4,7 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 const path = require("path");
 const cookieParser = require("cookie-parser");
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 8000;
 const app = express();
 
 const authRouter = require("./routes/user");
@@ -16,7 +16,6 @@ const errorHandler = require("./middlewares/errorHandler");
 
 app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
 app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use("/auth", authRouter);
 app.use("/api/user", usersRouter);

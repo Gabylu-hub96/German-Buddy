@@ -21,11 +21,11 @@ function App() {
     <div className="App">
       <Header isLoggedin={isLoggedin} setIsLoggedin={setIsLoggedin} />
       <main>
-        <HeaderContainer />
+        {/* <HeaderContainer /> */}
         <HomeCarousel />
         <hr />
-        <TextContainer />
-        <HomeCard />
+        {/* <TextContainer /> */}
+        {/* <HomeCard /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route

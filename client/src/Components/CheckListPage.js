@@ -1,17 +1,14 @@
-// var checklists = ....request("localhost:9000/api/checkList/forUser/{userId}")
-
-// checklists.map(... <ChecklistCard>)
 import { useState, useEffect } from "react";
 import axios from "../axiosInstance";
 import { Link } from "react-router-dom";
 import CheckListCard from "./CheckListCard";
 
-function CheckListPage() {
+const CheckListPage = () => {
   const [checkLists, setCheckLists] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`/api/checkList/forUser/`)
+      .get("/api/checkList/forUser/" + "6422193e01a7e66ee86c7348")
       .then((res) => {
         console.log(res.data);
         setCheckLists(res.data);
@@ -28,5 +25,5 @@ function CheckListPage() {
       </div>
     </>
   );
-}
+};
 export default CheckListPage;

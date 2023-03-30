@@ -9,7 +9,7 @@ import Contact from "./Components/Contact";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import Header from "./Components/Header";
-import CheckListPage from "./Components/CheckListPage";
+import MyCheckLists from "./Components/CheckListPage";
 import { useState } from "react";
 import MyNavbar from "./Components/MyNavbar";
 import UserPage from "./Components/UserPage";
@@ -38,6 +38,7 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path="/myChecklists" element={<MyCheckLists />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

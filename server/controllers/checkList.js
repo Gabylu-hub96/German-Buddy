@@ -1,11 +1,12 @@
 const CheckList = require("../models/checkList");
 const User = require("../models/user");
 const CheckListTemplate = require("../models/checkListTemplate");
+const ErrorResponse = require("../utils/errorResponse");
 
 const getCheckListsForUser = async (req, res, next) => {
   try {
     const checkLists = await CheckList.find({ userId: req.params.userId });
-    res.json(checkLists);
+    res.status(201).json(checkLists);
   } catch (error) {
     next(new ErrorResponse(error));
   }

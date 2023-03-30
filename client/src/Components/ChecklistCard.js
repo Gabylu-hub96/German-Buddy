@@ -14,13 +14,16 @@ const CheckListCard = (props) => {
   };
   return (
     <>
-      <div className="checkList" key={checkList?.id}>
-        <h1>{checkList?.title}</h1>
-        <div>
-          {checkList.tasks.map((task) => {
-            <p key={task._id}>{task.title}</p>;
-          })}
-        </div>
+      <div className="checkList">
+        <h1>{checkList.title}</h1>
+        {checkList.tasks.map((task, index) => {
+          return (
+            <div>
+              <h3 key={index}>{task.title}</h3>
+              <p key={index}>{task.description}</p>
+            </div>
+          );
+        })}
       </div>
     </>
   );

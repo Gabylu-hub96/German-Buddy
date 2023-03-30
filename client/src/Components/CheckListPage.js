@@ -3,7 +3,7 @@ import axios from "../axiosInstance";
 import { Link } from "react-router-dom";
 import CheckListCard from "./CheckListCard";
 
-const CheckListPage = (props) => {
+const CheckListPage = () => {
   const [checkLists, setCheckLists] = useState([]);
   const [user, setUser] = useState([]);
   const [loggedIn, setIsLoggedin] = useState(false);
@@ -13,26 +13,29 @@ const CheckListPage = (props) => {
     axios
       .get("/auth/loggedin-user")
       .then((res) => {
+        console.log(res.data, "reloaded");
         setUser(res.data);
         setIsLoggedin(true);
 
-        if (!user || !user._id) {
+        if (!res.data || !res.data._id) {
+          console.log("couldn't get currently logged in user");
           return;
         }
-        console.log(user, "user");
 
         // get checkLists for user
         axios
-          .get("/api/checkList/forUser/" + user._id)
+          .get("/api/checkList/forUser/" + res.data._id)
           .then((res) => {
             if (
               res.status == 201 &&
               (res.data == null || res.data.length === 0)
             ) {
               // If user has no checkLists, create checkLists for user
-              axios.post("/api/checkList/forUser/" + user._id).then((res) => {
-                setCheckLists(res.data);
-              });
+              axios
+                .post("/api/checkList/forUser/" + res.data._id)
+                .then((res) => {
+                  setCheckLists(res.data);
+                });
             } else {
               setCheckLists(res.data);
             }
@@ -40,7 +43,7 @@ const CheckListPage = (props) => {
           .catch((e) => console.log(e));
       })
       .catch((err) => {
-        console.log(err.response.data);
+        console.log(err.response.data, "blargy");
       });
   }, []);
 

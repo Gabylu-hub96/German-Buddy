@@ -14,11 +14,13 @@ const CheckListCard = (props) => {
   };
   return (
     <>
-      <div className="checkList" key={checkList?._id}>
+      <div className="checkList" key={checkList?.id}>
         <h1>{checkList?.title}</h1>
-        {checkList.tasks.map((task) => {
-          <p key={task._id}>{task.title}</p>;
-        })}
+        <div>
+          {checkList.tasks.map((task) => {
+            <p key={task._id}>{task.title}</p>;
+          })}
+        </div>
       </div>
     </>
   );

@@ -39,24 +39,22 @@ const myNavbar = () => {
               </LinkContainer>
             </Nav>
             <Nav>
-              <div className="login-signup-bttns">
-                <LinkContainer to="/login">
-                  <Button
-                    variant="outline-primary"
-                    className="text-white"
-                    id="login-bttn">
-                    Log in
-                  </Button>
-                </LinkContainer>
-                <LinkContainer to="signup">
-                  <Button
-                    variant="outline-primary"
-                    className="text-white"
-                    id="signup-bttn">
-                    Sign up
-                  </Button>
-                </LinkContainer>
-              </div>
+              {user ? (
+                <div className="header-user">
+                  <p>Hello: {user.username}</p>
+                  <button onClick={handleLogout}>Logout</button>
+                </div>
+              ) : (
+                <div className="header-user">
+                  <NavLink className="nav-link" to={"/login"}>
+                    Login
+                  </NavLink>
+                  <span> | </span>
+                  <NavLink className="nav-link" to={"/register"}>
+                    Register
+                  </NavLink>
+                </div>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

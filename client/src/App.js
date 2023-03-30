@@ -2,7 +2,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomeCarousel from "./Components/HomeCarousel";
 import { Routes, Route } from "react-router-dom";
-import Search from "./Components/Search";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Categories from "./Components/Categories";
@@ -12,10 +11,9 @@ import Register from "./Components/Register";
 import Header from "./Components/Header";
 import CheckListPage from "./Components/CheckListPage";
 import { useState } from "react";
-import HomeCard from "./Components/HomeCard";
-import TextContainer from "./Components/TextContainer";
-import { ImageProps } from "react-bootstrap";
-import HeaderContainer from "./Components/HeaderContainer";
+import MyNavbar from "./Components/MyNavbar";
+import UserPage from "./Components/UserPage";
+import Search from "./Components/Search";
 
 function App() {
   const [isLoggedin, setIsLoggedin] = useState(false);

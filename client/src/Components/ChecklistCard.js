@@ -6,7 +6,6 @@ const CheckListCard = (props) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [checkList, setCheckList] = useState(props.checkList);
-
   const handleDelete = () => {
     axios
       .delete(`/api/checkLists/${id}`)
@@ -15,8 +14,11 @@ const CheckListCard = (props) => {
   };
   return (
     <>
-      <div className="checkList card" key={checkList?.id}>
+      <div className="checkList" key={checkList?._id}>
         <h1>{checkList?.title}</h1>
+        {checkList.tasks.map((task) => {
+          <p key={task._id}>{task.title}</p>;
+        })}
       </div>
     </>
   );

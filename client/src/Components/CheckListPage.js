@@ -1,26 +1,58 @@
-// var checklists = ....request("localhost:9000/api/checkList/forUser/{userId}")
-
-// checklists.map(... <ChecklistCard>)
 import { useState, useEffect } from "react";
 import axios from "../axiosInstance";
 import { Link } from "react-router-dom";
 import ChecklistCard from "./ChecklistCard";
 
-function CheckListPage() {
+const CheckListPage = () => {
   const [checkLists, setCheckLists] = useState([]);
+  const [user, setUser] = useState([]);
+  const [loggedIn, setIsLoggedin] = useState(false);
 
   useEffect(() => {
+    // get loggedInUser
     axios
-      .get(`/api/checkList/forUser/`)
+      .get("/auth/loggedin-user")
       .then((res) => {
-        console.log(res.data);
-        setCheckLists(res.data);
+        console.log(res.data, "reloaded");
+        setUser(res.data);
+        setIsLoggedin(true);
+
+        if (!res.data || !res.data._id) {
+          console.log("couldn't get currently logged in user");
+          return;
+        }
+
+        // get checkLists for user
+        axios
+          .get("/api/checkList/forUser/" + res.data._id)
+          .then((res) => {
+            if (
+              res.status == 201 &&
+              (res.data == null || res.data.length === 0)
+            ) {
+              // If user has no checkLists, create checkLists for user
+              axios
+                .post("/api/checkList/forUser/" + res.data._id)
+                .then((res) => {
+                  setCheckLists(res.data);
+                });
+            } else {
+              setCheckLists(res.data);
+            }
+          })
+          .catch((e) => console.log(e));
       })
-      .catch((e) => console.log(e));
+      .catch((err) => {
+        console.log(err.response.data, "blargy");
+      });
   }, []);
 
   return (
     <>
+      {checkLists?.length == 0 ? (
+        <h1>CheckLists currently unavailable, please try again in 5 minutes</h1>
+      ) : null}
+      <h1>We have {checkLists?.length} checkLists for you!</h1>
       <div className="checkLists">
         {checkLists.map((checkList) => (
           <ChecklistCard checkList={checkList} />
@@ -28,5 +60,5 @@ function CheckListPage() {
       </div>
     </>
   );
-}
+};
 export default CheckListPage;

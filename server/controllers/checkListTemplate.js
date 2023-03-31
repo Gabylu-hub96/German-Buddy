@@ -1,4 +1,5 @@
 const CheckListTemplate = require("../models/checkListTemplate");
+const ErrorResponse = require("../utils/errorResponse");
 
 const getAllCheckListTemplates = async (req, res, next) => {
   try {

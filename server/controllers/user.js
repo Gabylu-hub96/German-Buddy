@@ -41,7 +41,7 @@ const login = async (req, res) => {
       } else {
         const payload = {
           _id: userDocument._id,
-          username: userDocument.username,
+          userName: userDocument.userName,
           email: userDocument.email,
         };
         const userToken = jwt.sign(payload, JWT_SECRET);
@@ -68,7 +68,11 @@ const getLoggedInUser = async (req, res) => {
     const currentUser = await User.findOne({ _id: req.user._id }).select(
       "-password"
     );
-    res.json(currentUser);
+
+    if (!currentUser) {
+      res.json({ message: "couldn't get user" });
+    }
+    res.status(201).json(currentUser);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }

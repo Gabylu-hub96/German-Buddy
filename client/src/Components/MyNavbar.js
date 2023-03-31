@@ -5,9 +5,29 @@ import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import { LinkContainer } from "react-router-bootstrap";
 import Logo from "../Images/Logo.png";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "../axiosInstance";
 
-const myNavbar = () => {
+const MyNavbar = ({ isLoggedin, setIsLoggedin }) => {
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    axios
+      .get("/auth/loggedin-user")
+      .then((res) => {
+        setUser(res.data);
+        setIsLoggedin(true);
+      })
+      .catch((err) => {
+        console.log(err.response.data);
+      });
+  }, [isLoggedin]);
+  const handleLogout = () => {
+    axios.post("/auth/logout", {}).then((res) => {
+      console.log("Logged out");
+      window.location.reload();
+    });
+  };
   return (
     <>
       <Navbar collapseOnSelect expand="lg" className="my-navbar-container">
@@ -43,6 +63,9 @@ const myNavbar = () => {
               {user ? (
                 <div className="header-user">
                   <p>Hello: {user.username}</p>
+                  <LinkContainer to="/checklist">
+                    <Nav.Link className="nav-link-item">My checkList</Nav.Link>
+                  </LinkContainer>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
               ) : (
@@ -64,4 +87,4 @@ const myNavbar = () => {
   );
 };
 
-export default myNavbar;
+export default MyNavbar;

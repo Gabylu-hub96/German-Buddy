@@ -1,24 +1,29 @@
-import Button from "react-bootstrap/esm/Button";
+import { useState, useEffect } from "react";
+import axios from "../axiosInstance";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
-function ChecklistCard({ checkList }) {
+const CheckListCard = (props) => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [checkList, setCheckList] = useState(props.checkList);
+  const handleDelete = () => {
+    axios
+      .delete(`/api/checkLists/${id}`)
+      .then((res) => navigate("/"))
+      .catch((e) => console.log(e));
+  };
   return (
     <>
-      <div className="checkList card">
+      <div className="checkList">
         <h1>{checkList.title}</h1>
-        // text field and + button to add task at the end of checklist.tasks//
-        <ol>
-          {checkList.tasks.map((task) => (
-            <li>
-              <div>
-                {task.title}
-                {task.description}
-                <button type="submit">
-                  <span class="fas fa-plus">+</span>
-                </button>
-              </div>
-            </li>
-          ))}
-        </ol>
+        {checkList.tasks.map((task, index) => {
+          return (
+            <div>
+              <h3 key={index}>{task.title}</h3>
+              <p key={index}>{task.description}</p>
+            </div>
+          );
+        })}
       </div>
     </>
   );

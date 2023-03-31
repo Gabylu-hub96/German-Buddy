@@ -196,12 +196,16 @@ body {
 
 .right-column img {
   margin-bottom: -400px;
-  padding-left: 5rem;
+  margin-top: -100px;
+  margin-right: -50px;
+  padding: 0;
 }
 
 .right-column img:last-child {
   margin-bottom: 0;
-  padding-left: 5rem;
+  padding-left: 20rem;
+  margin-top: -100px;
+  margin-left: -50px;
   align-items: flex-end;
 }
 .left-column h2 {
@@ -252,4 +256,10 @@ body {
 
 .card-button :hover {
   color: #7e460f;
+}
+
+.card-text {
+  font-weight: bolder;
+  font-size: 35px;
+  align-self: center;
 }

@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import { LinkContainer } from "react-router-bootstrap";
 import Logo from "../Images/Logo.png";
+import { Link, NavLink } from "react-router-dom";
 
 const myNavbar = () => {
   return (

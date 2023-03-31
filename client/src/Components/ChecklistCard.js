@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/esm/Button";
 
-function CheckListCard({ checkList }) {
+function ChecklistCard({ checkList }) {
   return (
     <>
       <div className="checkList card">
@@ -23,4 +23,4 @@ function CheckListCard({ checkList }) {
     </>
   );
 }
-export default CheckListCard;
+export default ChecklistCard;

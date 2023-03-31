@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../Images/Logo.png";
+import Image from "../Images/bgshape.png";
 
 const HeaderContainer = () => {
   return (
@@ -19,12 +20,9 @@ const HeaderContainer = () => {
         <button>Register Now</button>
       </div>
       <div className="right-column">
+        <img src={Image} alt=".." />
         <img
           src="https://media-public.canva.com/YbKEU/MAE-U0YbKEU/1/tl.png"
-          alt=".."
-        />
-        <img
-          src="https://media-public.canva.com/hoVVg/MAEW7vhoVVg/1/tl.png"
           alt=".."
         />
       </div>

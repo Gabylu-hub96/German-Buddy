@@ -5,6 +5,9 @@ import Button from "react-bootstrap/Button";
 const HomeCard = () => {
   return (
     <div className="container">
+      <p className="card-text">
+        <b>Explore our website and Services</b>
+      </p>
       <div className="row">
         <div className="col-md-4">
           <Card className="custom-card">

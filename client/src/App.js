@@ -11,11 +11,12 @@ import Login from "./Components/Login";
 import Register from "./Components/Register";
 import Header from "./Components/Header";
 import CheckListPage from "./Components/CheckListPage";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HomeCard from "./Components/HomeCard";
 import TextContainer from "./Components/TextContainer";
 import { ImageProps } from "react-bootstrap";
 import HeaderContainer from "./Components/HeaderContainer";
+import AddTask from "./Components/AddTask";
 
 function App() {
   const [isLoggedin, setIsLoggedin] = useState(false);

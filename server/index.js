@@ -38,6 +38,15 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
+// about page
+app.get("/about", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
+
+//const db = mongoose.connection;
+// db.on("error", (error) => console.error(error));
+// db.once("open", () => console.log("Connected to MongoDB"));
+
 connectDB().then(() => {
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "../axiosInstance";
 import { useParams, useNavigate, Link } from "react-router-dom";
 
-const ChecklistCard = (props) => {
+const CheckListCard = (props) => {
   const { id } = useParams();
 
   const navigate = useNavigate();
@@ -17,11 +17,11 @@ const ChecklistCard = (props) => {
     <>
       <div className="checkList">
         <h1>{checkList.title}</h1>
-        {checkList.tasks.map((task, index) => {
+        {checkList.tasks.map((task) => {
           return (
             <div>
-              <h3 key={index}>{task.title}</h3>
-              <p key={index}>{task.description}</p>
+              <h4 key={task._id}>{task.title}</h4>
+              <p key={task._id}>{task.description}</p>
             </div>
           );
         })}
@@ -29,4 +29,4 @@ const ChecklistCard = (props) => {
     </>
   );
 };
-export default ChecklistCard;
+export default CheckListCard;

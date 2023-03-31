@@ -21,14 +21,14 @@ const CheckListPage = () => {
           console.log("couldn't get currently logged in user");
           return;
         }
-
+        console.log("res.data", res.data);
         // get checkLists for user
         axios
           .get("/api/checkList/forUser/" + res.data._id)
-          .then((res) => {
+          .then((response) => {
             if (
-              res.status == 201 &&
-              (res.data == null || res.data.length === 0)
+              response.status == 201 &&
+              (response.data == null || response.data.length === 0)
             ) {
               // If user has no checkLists, create checkLists for user
               axios
@@ -37,7 +37,8 @@ const CheckListPage = () => {
                   setCheckLists(res.data);
                 });
             } else {
-              setCheckLists(res.data);
+              setCheckLists(response.data);
+              console.log("this here!", response.data);
             }
           })
           .catch((e) => console.log(e));
@@ -51,13 +52,16 @@ const CheckListPage = () => {
     <>
       {checkLists?.length == 0 ? (
         <h1>CheckLists currently unavailable, please try again in 5 minutes</h1>
-      ) : null}
-      <h1>We have {checkLists?.length} checkLists for you!</h1>
-      <div className="checkLists">
-        {checkLists.map((checkList) => (
-          <CheckListCard checkList={checkList} />
-        ))}
-      </div>
+      ) : (
+        <>
+          <h1>We have {checkLists?.length} checkLists for you!</h1>
+          <div className="checkLists">
+            {checkLists.map((checkList) => (
+              <CheckListCard checkList={checkList} />
+            ))}
+          </div>
+        </>
+      )}
     </>
   );
 };

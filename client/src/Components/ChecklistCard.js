@@ -4,6 +4,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 
 const CheckListCard = (props) => {
   const { id } = useParams();
+
   const navigate = useNavigate();
   const [checkList, setCheckList] = useState(props.checkList);
   const handleDelete = () => {

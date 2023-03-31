@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "../axiosInstance";
 import { Link } from "react-router-dom";
-import ChecklistCard from "./ChecklistCard";
+import CheckListCard from "./CheckListCard";
 
 const CheckListPage = () => {
   const [checkLists, setCheckLists] = useState([]);
@@ -13,7 +13,6 @@ const CheckListPage = () => {
     axios
       .get("/auth/loggedin-user")
       .then((res) => {
-        console.log(res.data, "reloaded");
         setUser(res.data);
         setIsLoggedin(true);
 
@@ -21,11 +20,11 @@ const CheckListPage = () => {
           console.log("couldn't get currently logged in user");
           return;
         }
-        console.log("res.data", res.data);
         // get checkLists for user
         axios
           .get("/api/checkList/forUser/" + res.data._id)
           .then((response) => {
+            console.log("response", response.status, response.data);
             if (
               response.status == 201 &&
               (response.data == null || response.data.length === 0)
@@ -57,7 +56,7 @@ const CheckListPage = () => {
           <h1>We have {checkLists?.length} checkLists for you!</h1>
           <div className="checkLists">
             {checkLists.map((checkList) => (
-              <CheckListCard checkList={checkList} />
+              <CheckListCard checkList={checkList} key={checkList._id} />
             ))}
           </div>
         </>

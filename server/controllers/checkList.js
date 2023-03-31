@@ -6,6 +6,7 @@ const ErrorResponse = require("../utils/errorResponse");
 const getCheckListsForUser = async (req, res, next) => {
   try {
     const checkLists = await CheckList.find({ userId: req.params.userId });
+    console.log("checklist", checkLists);
     res.status(201).json(checkLists);
   } catch (error) {
     next(new ErrorResponse(error));
@@ -23,6 +24,7 @@ const createCheckLists = async (req, res, next) => {
     // Add userId to each checklist
     var checklistObjects = checkListTemplates.map((template) => {
       template.userId = user._id;
+      delete template._id;
       return template;
     });
 

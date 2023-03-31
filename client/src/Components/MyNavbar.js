@@ -63,7 +63,7 @@ const MyNavbar = ({ isLoggedin, setIsLoggedin }) => {
               {user ? (
                 <div className="header-user">
                   <p>Hello: {user.username}</p>
-                  <LinkContainer to="/checklist">
+                  <LinkContainer to="/myChecklists">
                     <Nav.Link className="nav-link-item">My checkList</Nav.Link>
                   </LinkContainer>
                   <button onClick={handleLogout}>Logout</button>

@@ -41,7 +41,7 @@ const login = async (req, res) => {
       } else {
         const payload = {
           _id: userDocument._id,
-          username: userDocument.username,
+          userName: userDocument.userName,
           email: userDocument.email,
         };
         const userToken = jwt.sign(payload, JWT_SECRET);

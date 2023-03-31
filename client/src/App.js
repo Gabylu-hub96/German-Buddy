@@ -10,7 +10,6 @@ import Register from "./Components/Register";
 import MyCheckLists from "./Components/CheckListPage";
 import { useState } from "react";
 import MyNavbar from "./Components/MyNavbar";
-import UserPage from "./Components/UserPage";
 
 function App() {
   const [isLoggedin, setIsLoggedin] = useState(false);

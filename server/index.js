@@ -11,7 +11,6 @@ const authRouter = require("./routes/user");
 const usersRouter = require("./routes/user");
 const checkListRouter = require("./routes/checkList");
 const checkListTemplateRouter = require("./routes/checkListTemplate");
-const taskRoutes = require("./routes/taskRoutes");
 
 const errorHandler = require("./middlewares/errorHandler");
 
@@ -22,7 +21,6 @@ app.use("/auth", authRouter);
 app.use("/api/user", usersRouter);
 app.use("/api/checkList", checkListRouter);
 app.use("/api/checkListTemplate", checkListTemplateRouter);
-app.use("/api/task", taskRouter);
 
 // errorHandler is middleware for all routes
 app.use(errorHandler);

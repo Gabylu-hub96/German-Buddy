@@ -11,6 +11,7 @@ const authRouter = require("./routes/user");
 const usersRouter = require("./routes/user");
 const checkListRouter = require("./routes/checkList");
 const checkListTemplateRouter = require("./routes/checkListTemplate");
+const taskRoutes = require("./routes/taskRoutes");
 
 const errorHandler = require("./middlewares/errorHandler");
 
@@ -21,6 +22,7 @@ app.use("/auth", authRouter);
 app.use("/api/user", usersRouter);
 app.use("/api/checkList", checkListRouter);
 app.use("/api/checkListTemplate", checkListTemplateRouter);
+app.use("/api/task", taskRouter);
 
 // errorHandler is middleware for all routes
 app.use(errorHandler);
@@ -37,6 +39,15 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(buildPath, "index.html"));
   });
 }
+
+// about page
+app.get("/about", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
+
+//const db = mongoose.connection;
+// db.on("error", (error) => console.error(error));
+// db.once("open", () => console.log("Connected to MongoDB"));
 
 connectDB().then(() => {
   app.listen(PORT, () => {

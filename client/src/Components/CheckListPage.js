@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "../axiosInstance";
 import { Link } from "react-router-dom";
-import CheckListCard from "./CheckListCard";
+import ChecklistCard from "./ChecklistCard";
 
 const CheckListPage = () => {
   const [checkLists, setCheckLists] = useState([]);

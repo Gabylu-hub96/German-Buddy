@@ -55,6 +55,9 @@ function Header({ isLoggedin, setIsLoggedin }) {
               <LinkContainer to="/categories">
                 <Nav.Link className="nav-link-item">Categories</Nav.Link>
               </LinkContainer>
+              <LinkContainer to="/myChecklists">
+                <Nav.Link className="nav-link-item">My Checklists</Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/contact">
                 <Nav.Link className="nav-link-item">Contact</Nav.Link>
               </LinkContainer>

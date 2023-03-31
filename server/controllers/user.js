@@ -68,7 +68,11 @@ const getLoggedInUser = async (req, res) => {
     const currentUser = await User.findOne({ _id: req.user._id }).select(
       "-password"
     );
-    res.json(currentUser);
+
+    if (!currentUser) {
+      res.json({ message: "couldn't get user" });
+    }
+    res.status(201).json(currentUser);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }

@@ -47,6 +47,21 @@ const CheckListPage = () => {
       });
   }, []);
 
+  // handleAddTask(() => {
+  //   checkLists.add({
+  //     title: textFieldTitle.text,
+  //     description: textFielddescription.text,
+  //     isCompleted: false,
+  //   });
+  // });
+
+  // handleSaveCheckList((checkList) => {
+  //   axios
+  //     .put("/api/checkList/" + checkList._id, checkList);
+
+  //     reload(data);
+  // })
+
   return (
     <>
       {checkLists?.length == 0 ? (

@@ -29,7 +29,7 @@ const CheckListCard = (props) => {
       <div className="checkList">
         <div>
           <button onClick={handleDeleteCheckList}>delete</button>
-          <button onClick={handleSaveCheckList}>save</button>
+          {/* <button onClick={handleSaveCheckList}>save</button> */}
         </div>
         <h1>{checkList.title}</h1>
         {checkList.tasks.map((task) => {

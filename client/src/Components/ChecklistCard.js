@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "../axiosInstance";
 import { useParams, useNavigate, Link } from "react-router-dom";
 
-const CheckListCard = (props) => {
+const ChecklistCard = (props) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [checkList, setCheckList] = useState(props.checkList);
@@ -28,4 +28,4 @@ const CheckListCard = (props) => {
     </>
   );
 };
-export default CheckListCard;
+export default ChecklistCard;

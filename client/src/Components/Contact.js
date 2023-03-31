@@ -1,3 +1,6 @@
+import React from "react";
+import HeroInternal from './HeroInternal'
+
 const Contact = () => {
   return (
     <div className="categories-container">

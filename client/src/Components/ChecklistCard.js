@@ -4,15 +4,24 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 
 const CheckListCard = (props) => {
   const navigate = useNavigate();
-  const [checkList, setCheckList] = useState(props.checkList);
+  const [checkList, setCheckList] = useState(
+    props.checkList,
+    props.setCheckList // not working
+  );
+  const [checkLists, setCheckLists] = useState(
+    props.checkLists,
+    props.setCheckLists // not working
+  );
 
   // this deletes the checkList
   const handleDeleteCheckList = () => {
     axios
       .delete("/api/checkList/" + checkList._id)
-      .then(
-        (res) => navigate(0) // this reloads the myChecklists page (this checkList will disappear)
-      )
+      .then((res) => {
+        // TODO: update checklists somehow (couldn't figure it out, ask Mahmoud)
+        // until then, just refresh the page
+        navigate(0);
+      })
       .catch((e) => console.log(e));
   };
 

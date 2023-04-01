@@ -71,7 +71,12 @@ const CheckListPage = () => {
           <h1>We have {checkLists?.length} checkLists for you!</h1>
           <div className="checkLists">
             {checkLists.map((checkList) => (
-              <CheckListCard checkList={checkList} key={checkList._id} />
+              <CheckListCard
+                checkList={checkList}
+                checkLists={checkLists}
+                setCheckLists={setCheckLists} // not working
+                key={checkList._id}
+              />
             ))}
           </div>
         </>

@@ -1,30 +1,27 @@
 import { useState, useEffect } from "react";
-import axios from "../axiosInstance";
 import { useParams, useNavigate, Link } from "react-router-dom";
-
+import axios from "../axiosInstance";
 const CheckListCard = (props) => {
   const navigate = useNavigate();
   const [checkList, setCheckList] = useState(props.checkList);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("/api/checkList/forUser/")
-  //     .then((res) => setCheckList(res.data))
-  //     .catch((e) => console.log(e));
-  // }, []);
-
-  const handleChange = (doc) => {
-    console.log("doc", doc);
-    // setCheckList({ ...checkList, [documents]: newDocuments });
+  const handleChange = (myDoc) => {
+    const newDocuments = checkList.documents.map((doc) => {
+      console.log("WHAT IS THIS???");
+      if (doc._id === myDoc._id) {
+        doc.isCompleted = !doc.isCompleted;
+      }
+      return doc;
+    });
+    setCheckList({ ...checkList, documents: newDocuments });
+    axios
+      .put(`/api/checkList/${checkList._id}`, {
+        ...checkList,
+        documents: newDocuments,
+      })
+      .then((res) => console.log(res))
+      .catch((e) => console.log(e));
   };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   axios
-  //     .put()
-  //     .then((res) => navigate("/"))
-  //     .catch((e) => console.log(e));
-  // };
 
   return (
     <>
@@ -37,6 +34,7 @@ const CheckListCard = (props) => {
               <h4>
                 <input
                   type="checkbox"
+                  checked={document.isCompleted}
                   onChange={() => handleChange(document)}
                 />
                 {document.title}

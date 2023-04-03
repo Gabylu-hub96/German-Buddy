@@ -50,13 +50,19 @@ const CheckListPage = () => {
   return (
     <>
       {checkLists?.length == 0 ? (
-        <h1>CheckLists currently unavailable, please try again in 5 minutes</h1>
+        <h1>
+          CheckLists currently unavailable, please try again in 5 minutes!
+        </h1>
       ) : (
         <>
-          <h1>We have {checkLists?.length} checkLists for you!</h1>
           <div className="checkLists">
             {checkLists.map((checkList) => (
-              <CheckListCard checkList={checkList} key={checkList._id} />
+              <CheckListCard
+                checkList={checkList}
+                checkLists={checkLists}
+                setCheckLists={setCheckLists} // not working
+                key={checkList._id}
+              />
             ))}
           </div>
         </>

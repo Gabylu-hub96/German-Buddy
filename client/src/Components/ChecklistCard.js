@@ -3,25 +3,28 @@ import axios from "../axiosInstance";
 import { useParams, useNavigate, Link } from "react-router-dom";
 
 const CheckListCard = (props) => {
-  const { id } = useParams();
-
   const navigate = useNavigate();
   const [checkList, setCheckList] = useState(props.checkList);
-  const handleDelete = () => {
-    axios
-      .delete(`/api/checkLists/${id}`)
-      .then((res) => navigate("/"))
-      .catch((e) => console.log(e));
-  };
+
   return (
     <>
       <div className="checkList">
-        <h1>{checkList.title}</h1>
-        {checkList.tasks.map((task) => {
+        <div></div>
+        <h1>Checklist of necessary documents for {checkList.category}</h1>
+        {checkList.documents.map((document) => {
           return (
-            <div key={task._id}>
-              <h4>{task.title}</h4>
-              <p>{task.description}</p>
+            <div key={document._id}>
+              <h4>{document.title}</h4>
+              <p>{document.description}</p>
+            </div>
+          );
+        })}
+        <h1>Checklist of necessary steps for {checkList.category}</h1>
+        {checkList.steps.map((step) => {
+          return (
+            <div key={step._id}>
+              <h4>{step.title}</h4>
+              <p>{step.description}</p>
             </div>
           );
         })}

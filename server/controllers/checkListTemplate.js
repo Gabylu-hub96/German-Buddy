@@ -1,6 +1,7 @@
 const CheckListTemplate = require("../models/checkListTemplate");
 const ErrorResponse = require("../utils/errorResponse");
 
+// get all templates
 const getAllCheckListTemplates = async (req, res, next) => {
   try {
     const checkListTemplates = await CheckListTemplate.find();
@@ -9,6 +10,8 @@ const getAllCheckListTemplates = async (req, res, next) => {
     next(new ErrorResponse(error));
   }
 };
+
+// get a certain template
 const getCheckListTemplateById = async (req, res, next) => {
   try {
     const checkListTemplates = await CheckListTemplate.find({
@@ -20,6 +23,7 @@ const getCheckListTemplateById = async (req, res, next) => {
   }
 };
 
+// get all templates of a certain category
 const getCheckListTemplateByCategory = async (req, res, next) => {
   try {
     const checkListTemplates = await CheckListTemplate.find({
@@ -31,6 +35,7 @@ const getCheckListTemplateByCategory = async (req, res, next) => {
   }
 };
 
+// update a certain template in the database (e.g. add/remove task)
 const updateCheckListTemplate = async (req, res, next) => {
   try {
     const updateCheckListTemplate = await CheckListTemplate.findOneAndUpdate(
@@ -46,6 +51,8 @@ const updateCheckListTemplate = async (req, res, next) => {
     next(new ErrorResponse(error));
   }
 };
+
+// delete a certain checkList template
 const deleteCheckListTemplate = async (req, res, next) => {
   try {
     const deletedCheckListTemplate = await CheckListTemplate.findOneAndDelete({

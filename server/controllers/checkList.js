@@ -3,6 +3,7 @@ const User = require("../models/user");
 const CheckListTemplate = require("../models/checkListTemplate");
 const ErrorResponse = require("../utils/errorResponse");
 
+// gets checkLists linked with a certain user
 const getCheckListsForUser = async (req, res, next) => {
   try {
     const checkLists = await CheckList.find({ userId: req.params.userId });
@@ -12,6 +13,8 @@ const getCheckListsForUser = async (req, res, next) => {
     next(new ErrorResponse(error));
   }
 };
+
+// creates checkLists for a certain user (only if user has no checkLists yet)
 const createCheckLists = async (req, res, next) => {
   try {
     const user = await User.findOne({ _id: req.params.userId });
@@ -24,6 +27,7 @@ const createCheckLists = async (req, res, next) => {
     // Add userId to each checklist
     var checklistObjects = checkListTemplates.map((template) => {
       template.userId = user._id;
+      // remove id to fix duplicate key server crash
       delete template._id;
       return template;
     });
@@ -37,7 +41,7 @@ const createCheckLists = async (req, res, next) => {
     next(new ErrorResponse(error));
   }
 };
-
+// get all checkLists in the database
 const getAllCheckLists = async (req, res, next) => {
   try {
     const checkLists = await CheckList.find();
@@ -46,9 +50,12 @@ const getAllCheckLists = async (req, res, next) => {
     next(new ErrorResponse(error));
   }
 };
+// get a certain checkList by Id
 const getCheckListById = async (req, res, next) => {
   res.json(req.reqCheckList);
 };
+
+// update a certain checkList in the database (e.g. add/remove task, set task completed etc)
 const updateCheckList = async (req, res, next) => {
   try {
     const updatedCheckList = await CheckList.findOneAndUpdate(
@@ -64,6 +71,8 @@ const updateCheckList = async (req, res, next) => {
     next(new ErrorResponse(error));
   }
 };
+
+// delete a certain checkList
 const deleteCheckList = async (req, res, next) => {
   try {
     const deletedCheckList = await CheckList.findOneAndDelete({

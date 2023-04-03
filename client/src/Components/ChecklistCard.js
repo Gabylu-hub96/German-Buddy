@@ -6,6 +6,26 @@ const CheckListCard = (props) => {
   const navigate = useNavigate();
   const [checkList, setCheckList] = useState(props.checkList);
 
+  // useEffect(() => {
+  //   axios
+  //     .get("/api/checkList/forUser/")
+  //     .then((res) => setCheckList(res.data))
+  //     .catch((e) => console.log(e));
+  // }, []);
+
+  const handleChange = (doc) => {
+    console.log("doc", doc);
+    // setCheckList({ ...checkList, [documents]: newDocuments });
+  };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   axios
+  //     .put()
+  //     .then((res) => navigate("/"))
+  //     .catch((e) => console.log(e));
+  // };
+
   return (
     <>
       <div className="checkList">
@@ -14,7 +34,13 @@ const CheckListCard = (props) => {
         {checkList.documents.map((document) => {
           return (
             <div key={document._id}>
-              <h4>{document.title}</h4>
+              <h4>
+                <input
+                  type="checkbox"
+                  onChange={() => handleChange(document)}
+                />
+                {document.title}
+              </h4>
               <p>{document.description}</p>
             </div>
           );
@@ -23,7 +49,12 @@ const CheckListCard = (props) => {
         {checkList.steps.map((step) => {
           return (
             <div key={step._id}>
-              <h4>{step.title}</h4>
+              <h4>
+                {" "}
+                <input type="checkbox" />
+                {step.title}
+              </h4>
+
               <p>{step.description}</p>
             </div>
           );

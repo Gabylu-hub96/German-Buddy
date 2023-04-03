@@ -4,48 +4,27 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 
 const CheckListCard = (props) => {
   const navigate = useNavigate();
-  const [checkList, setCheckList] = useState(
-    props.checkList,
-    props.setCheckList // not working
-  );
-  const [checkLists, setCheckLists] = useState(
-    props.checkLists,
-    props.setCheckLists // not working
-  );
-
-  // this deletes the checkList
-  const handleDeleteCheckList = () => {
-    axios
-      .delete("/api/checkList/" + checkList._id)
-      .then((res) => {
-        // TODO: update checklists somehow (couldn't figure it out, ask Mahmoud)
-        // until then, just refresh the page
-        navigate(0);
-      })
-      .catch((e) => console.log(e));
-  };
-
-  // // this updates the checkList
-  // const handleSaveCheckList = () => {
-  //   axios
-  //     .update("/api/checkList/" + checkList._id)
-  //     .then((res) => {})
-  //     .catch((e) => console.log(e));
-  // };
+  const [checkList, setCheckList] = useState(props.checkList);
 
   return (
     <>
       <div className="checkList">
-        <div>
-          <button onClick={handleDeleteCheckList}>delete</button>
-          {/* <button onClick={handleSaveCheckList}>save</button> */}
-        </div>
-        <h1>{checkList.title}</h1>
-        {checkList.tasks.map((task) => {
+        <div></div>
+        <h1>Checklist of necessary documents for {checkList.category}</h1>
+        {checkList.documents.map((document) => {
           return (
-            <div key={task._id}>
-              <h4>{task.title}</h4>
-              <p>{task.description}</p>
+            <div key={document._id}>
+              <h4>{document.title}</h4>
+              <p>{document.description}</p>
+            </div>
+          );
+        })}
+        <h1>Checklist of necessary steps for {checkList.category}</h1>
+        {checkList.steps.map((step) => {
+          return (
+            <div key={step._id}>
+              <h4>{step.title}</h4>
+              <p>{step.description}</p>
             </div>
           );
         })}

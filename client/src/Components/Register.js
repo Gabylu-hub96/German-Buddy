@@ -85,9 +85,9 @@ function Register({ setIsLoggedin }) {
         <p className="text-danger">{error.category.message}</p>
       )}
       <select name="category" onChange={handleChange}>
-        <option value="student">"student"</option>
-        <option value="family">"family"</option>
-        <option value="professional">"professional"</option>
+        <option value="student">student</option>
+        <option value="family">family</option>
+        <option value="professional">professional</option>
       </select>
       <label htmlFor="">Age:</label>
       {error.age && <p className="text-danger">{error.age.message}</p>}
@@ -122,9 +122,9 @@ function Register({ setIsLoggedin }) {
         <p className="text-danger">{error.visaStatus.message}</p>
       )}
       <select name="visaStatus" onChange={handleChange}>
-        <option value="approved">"approved"</option>
-        <option value="pending">"pending"</option>
-        <option value="denied">"denied"</option>
+        <option value="approved">approved</option>
+        <option value="pending">pending</option>
+        <option value="denied">denied</option>
       </select>
       <label htmlFor="">Email:</label>
       {error.email && <p className="text-danger">{error.email.message}</p>}

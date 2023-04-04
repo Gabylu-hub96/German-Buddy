@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Carousel } from "react-bootstrap";
 import Image from "react-bootstrap";
-import Logo from "../Images/Logo.png";
+import Logo from "../Images/Logo2.png";
 
 const HomeCarousel = () => {
   return (
@@ -27,7 +27,7 @@ const HomeCarousel = () => {
         <Carousel.Item>
           <img
             className="carousel-image d-block height-100 w-100"
-            src="https://www.yesgermany.com/wp-content/uploads/2022/07/EVERYTHING-ABOUT.png"
+            src="https://germanyiscalling.com/wp-content/uploads/2023/03/German-education-system.png"
             alt="second image"
           />
           <Carousel.Caption className="carousel-caption">
@@ -43,7 +43,7 @@ const HomeCarousel = () => {
         <Carousel.Item>
           <img
             className="carousel-image d-block height-100 w-100"
-            src="https://www.tripleibusiness.com/public/assets/images/1959114938.png"
+            src="https://germanyiscalling.com/wp-content/uploads/2022/08/How-to-apply-for-a-PR-in-Germany.png"
             alt="Third slide"
           />
           <Carousel.Caption className="carousel-caption">

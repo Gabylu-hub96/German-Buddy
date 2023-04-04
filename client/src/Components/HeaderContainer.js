@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../Images/Logo.png";
+import Logo from "../Images/Logo2.png";
 import Image from "../Images/bgshape.png";
 
 const HeaderContainer = () => {
@@ -9,24 +9,19 @@ const HeaderContainer = () => {
         <img
           src={Logo}
           alt="Logo"
-          width="100"
-          height="100"
-          className="d-inline-block align-top"
+
+          className="d-inline-block"
         />
-        <h2>
-          <b>German Buddy</b>
-        </h2>
         <p> We help make your settling in Germany uncomplicated.</p>
         <button>Register Now</button>
       </div>
-      <div className="right-column">
-        <img src={Image} alt=".." />
+      <div className="image-container">
         <img
           src="https://media-public.canva.com/YbKEU/MAE-U0YbKEU/1/tl.png"
           alt=".."
         />
+        </div>
       </div>
-    </div>
   );
 };
 

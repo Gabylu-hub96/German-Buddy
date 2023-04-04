@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import { LinkContainer } from "react-router-bootstrap";
-import Logo from "../Images/Logo.png";
+import Logo from "../Images/Logo2.png";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "../axiosInstance";

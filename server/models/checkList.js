@@ -2,13 +2,23 @@ const mongoose = require("mongoose");
 
 const checkListSchema = new mongoose.Schema(
   {
-    title: { type: String, required: [true, "Checklist must have a title!"] },
-    description: { type: String },
     userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
-    tasks: [
+    category: {
+      type: String,
+      enum: ["student", "family", "professional"],
+      required: [true, "Category is required!"],
+    },
+    documents: [
+      {
+        title: String,
+        description: String,
+        isCompleted: Boolean,
+      },
+    ],
+    steps: [
       {
         title: String,
         description: String,

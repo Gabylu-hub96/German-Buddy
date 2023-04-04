@@ -24,6 +24,7 @@ const HomeCard = () => {
         <div className="col-md-4">
           <Card className="custom-card">
             <Card.Body>
+
               <Card.Title className="card-title">Experience Our Community </Card.Title>
               <Card.Text>
                 Always stay connected through our community tab and talk to

@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const JWT_SECRET = process.env.JWT_SECRET;
 
+// create a user and save it to the database, create userToken
 const register = async (req, res, next) => {
   try {
     const newUser = await User.create(req.body);
@@ -63,6 +64,7 @@ const logout = (req, res) => {
   res.json({ message: "You have Successfully Logged Out!" });
 };
 
+// return the currently logged in User
 const getLoggedInUser = async (req, res) => {
   try {
     const currentUser = await User.findOne({ _id: req.user._id }).select(
@@ -78,6 +80,7 @@ const getLoggedInUser = async (req, res) => {
   }
 };
 
+// get a list of all users in the database
 const getAllUsers = async (req, res, next) => {
   try {
     const users = await User.find();
@@ -86,9 +89,13 @@ const getAllUsers = async (req, res, next) => {
     next(new ErrorResponse(error));
   }
 };
+
+// get a certain user by Id
 const getUserById = async (req, res, next) => {
   res.json(req.reqUser);
 };
+
+// update a user's data
 const updateUser = async (req, res, next) => {
   try {
     const updatedUser = await User.findOneAndUpdate(
@@ -104,6 +111,8 @@ const updateUser = async (req, res, next) => {
     next(new ErrorResponse(error));
   }
 };
+
+// delete a certain user
 const deleteUser = async (req, res, next) => {
   try {
     const deletedUser = await User.findOneAndDelete({ _id: req.params.id });

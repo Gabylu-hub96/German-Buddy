@@ -11,6 +11,7 @@ import MyCheckLists from "./Components/CheckListPage";
 import { useState } from "react";
 import MyNavbar from "./Components/MyNavbar";
 import Footer from "./Components/Footer";
+import MyProfile from "./Components/UserPage";
 
 function App() {
   const [isLoggedin, setIsLoggedin] = useState(false);
@@ -27,6 +28,7 @@ function App() {
           path="/register"
           element={<Register setIsLoggedin={setIsLoggedin} />}
         />
+        <Route path="/myProfile" element={<MyProfile />} />
         <Route path="/about" element={<About />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/myChecklists" element={<MyCheckLists />} />

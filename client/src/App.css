@@ -80,14 +80,32 @@ body {
   align-items: center;
   gap: 10px;
 }
-.login-signup-bttns {
-  display: flex;
-  gap: 25px;
+.user-icon {
+  padding: 20px;
+  margin: 5px;
 }
+
+.user-name {
+  font-weight: bold;
+  font-size: large;
+}
+
+.user-profile-card {
+  padding: 20px;
+  margin: 20px;
+}
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 #login-bttn,
-#signup-bttn {
-  background: none;
-  display: block;
+#register-bttn,
+#register-form-bttn {
+  background: black;
+  color: #fcf3eb;
+  letter-spacing: 2px;
   margin: 10px auto;
   text-align: center;
   border: 1px solid #ccc;
@@ -96,14 +114,60 @@ body {
   border-radius: 20px;
   transition: 0.5s;
   cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
 }
 #login-bttn:hover,
-#signup-bttn:hover {
-  background-color: rgba(248, 215, 95, 0.61);
-  color: #000000;
+#register-bttn:hover,
+#register-form-bttn:hover {
+  background-color: #ff5757;
+  color: #fcf3eb;
+  box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
+  transform: translateY(-7px);
 }
 /* Navbar ends */
 
+/* Register Form */
+
+.register-form-container {
+  padding: 100px;
+  margin: 80px;
+}
+/*.form-left-container {
+  width: 50%;
+}*/
+.form-input-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding-left: 90px;
+  margin: 40px;
+  width: 50%;
+}
+.form-right-container {
+  background-image: url(./Images/register-form-img.jpg);
+  background-position: center;
+  width: 50%;
+  background-size: cover;
+}
+
+#register-form-content {
+  display: flex;
+  flex-direction: row;
+  /* margin: auto; */
+  background-color: #dc35459c;
+  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
+  border-radius: 15px;
+}
+.form-label {
+  font-weight: bolder;
+  margin: 10px;
+}
+#register-form-bttn {
+  margin-top: 35px;
+}
 /* Search bar */
 .search-container {
   display: flex;
@@ -114,6 +178,8 @@ body {
   min-width: 25%;
   margin: 1rem 0;
   padding: 0.5rem 0.5rem;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
   border-radius: 15px;
   background: #fefcff;
   border: 4px solid #ccc;
@@ -265,11 +331,11 @@ body {
   color: #7e460f;
   background-color: #ff0000;
 }
-
 .card-text {
-  font-weight: bolder;
+  font-weight: lighter;
   font-size: 35px;
   align-self: center;
+  padding-top: 5rem;
 }
 
 /* styling for categories */

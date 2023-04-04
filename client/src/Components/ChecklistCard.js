@@ -9,6 +9,9 @@ const CheckListCard = (props) => {
   const [docsPercentage, setDocsPercentage] = useState(
     handleProgressBar(props.checkList.documents)
   );
+  const [stepsPercentage, setStepsPercentage] = useState(
+    handleProgressBar(props.checkList.steps)
+  );
 
   const handleChange = (myDoc) => {
     const newDocuments = checkList.documents.map((doc) => {
@@ -37,6 +40,33 @@ const CheckListCard = (props) => {
     return (progress / docs.length) * 100;
   }
 
+  const handleStepChange = (myStep) => {
+    const newSteps = checkList.steps.map((step) => {
+      if (step._id === myStep._id) {
+        step.isCompleted = !step.isCompleted;
+      }
+      return step;
+    });
+    setCheckList({ ...checkList, steps: newSteps });
+    setStepsPercentage(handleProgressBar(newSteps));
+    axios
+      .put(`/api/checkList/${checkList._id}`, {
+        ...checkList,
+        steps: newSteps,
+      })
+      .then((res) => console.log(res))
+      .catch((e) => console.log(e));
+  };
+
+  function handleProgressBar(steps) {
+    const progress = steps.reduce((acc, curr) => {
+      console.log("current", curr.isCompleted);
+      return (acc += curr.isCompleted ? 1 : 0);
+    }, 0);
+    console.log("progress", progress);
+    return (progress / steps.length) * 100;
+  }
+
   return (
     <>
       <div className="checkList">
@@ -54,7 +84,6 @@ const CheckListCard = (props) => {
                 {document.title}
               </h4>
               <p>{document.description}</p>
-              <div> {document.progress} </div>
             </div>
           );
         })}
@@ -69,14 +98,22 @@ const CheckListCard = (props) => {
             <div key={step._id}>
               <h4>
                 {" "}
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  checked={step.isCompleted}
+                  onChange={() => handleStepChange(step)}
+                />
                 {step.title}
               </h4>
-
               <p>{step.description}</p>
             </div>
           );
         })}
+        <ProgressBar
+          animated
+          now={stepsPercentage}
+          label={`${Math.ceil(stepsPercentage)}%`}
+        />
       </div>
     </>
   );

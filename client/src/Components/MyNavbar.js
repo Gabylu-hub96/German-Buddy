@@ -8,6 +8,8 @@ import Logo from "../Images/Logo.png";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "../axiosInstance";
+import User from "../Images/user-icon.png";
+import CheckListIcon from "../Images/checklist-icon.png";
 
 const MyNavbar = ({ isLoggedin, setIsLoggedin }) => {
   const [user, setUser] = useState(null);
@@ -61,20 +63,30 @@ const MyNavbar = ({ isLoggedin, setIsLoggedin }) => {
             </Nav>
             <Nav>
               {user ? (
-                <div className="header-user">
-                  <p>Hello: {user.username}</p>
+                <div className="user-session">
+                  <p className="user-name">Welcome back {user.firstName}!</p>
                   <LinkContainer to="/myChecklists">
-                    <Nav.Link className="nav-link-item">My checkList</Nav.Link>
+                    <Nav.Link className="user-icon">
+                      <img
+                        src={CheckListIcon}
+                        alt="user"
+                        width="80"
+                        height="80"
+                        className="d-inline-block align-top"
+                      />
+                    </Nav.Link>
                   </LinkContainer>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
               ) : (
                 <div className="header-user">
-                  <NavLink className="nav-link" to={"/login"}>
+                  <NavLink className="nav-link" id="login-bttn" to={"/login"}>
                     Login
                   </NavLink>
-                  <span> | </span>
-                  <NavLink className="nav-link" to={"/register"}>
+                  <NavLink
+                    className="nav-link"
+                    id="register-bttn"
+                    to={"/register"}>
                     Register
                   </NavLink>
                 </div>

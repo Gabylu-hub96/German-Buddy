@@ -7,7 +7,7 @@ import ReactPlayer from "react-player";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-function About() {
+function AboutPage() {
   return (
     <div className="home-container">
       <div className="row"></div>
@@ -33,8 +33,7 @@ function About() {
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+          allowfullscreen></iframe>
       </div>
       <div className="about-container">
         <p>
@@ -103,9 +102,7 @@ function About() {
             <Card className="custom-card">
               <Card.Body>
                 <Card.Title className="about-title">
-                  <b>
-                  German Buddy App{" "}
-                  </b>
+                  <b>German Buddy App </b>
                 </Card.Title>
                 <Card.Text>
                   The German Buddy app is something we hope to develope in the
@@ -121,9 +118,7 @@ function About() {
             <Card className="custom card">
               <Card.Body>
                 <Card.Title className="card-title">
-                  <b>
-                  Community Activities
-                  </b>
+                  <b>Community Activities</b>
                 </Card.Title>
                 <Card.Text>
                   Through the German Buddy community, users can receive

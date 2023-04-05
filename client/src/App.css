@@ -102,7 +102,8 @@ body {
 
 #login-bttn,
 #register-bttn,
-#register-form-bttn {
+#register-form-bttn,
+#login-form-bttn {
   background: black;
   color: #fcf3eb;
   letter-spacing: 2px;
@@ -121,7 +122,8 @@ body {
 }
 #login-bttn:hover,
 #register-bttn:hover,
-#register-form-bttn:hover {
+#register-form-bttn:hover,
+#login-form-bttn:hover {
   background-color: #ff5757;
   color: #fcf3eb;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
@@ -131,14 +133,13 @@ body {
 
 /* Register Form */
 
-.register-form-container {
-  padding: 100px;
+.register-form-container,
+.login-form-container {
+  padding: 80px;
   margin: 80px;
 }
-/*.form-left-container {
-  width: 50%;
-}*/
-.form-input-content {
+.form-input-content,
+.login-left-container {
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -153,10 +154,10 @@ body {
   background-size: cover;
 }
 
-#register-form-content {
+#register-form-content,
+#login-form-content {
   display: flex;
   flex-direction: row;
-  /* margin: auto; */
   background-color: #dc35459c;
   box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
   border-radius: 15px;
@@ -165,7 +166,22 @@ body {
   font-weight: bolder;
   margin: 10px;
 }
-#register-form-bttn {
+.login-left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-right-container {
+  background-image: url(./Images/Login-form-img.png);
+  background-color: #fefcff;
+  background-position: center;
+  width: 50%;
+  background-size: cover;
+}
+
+#register-form-bttn,
+#login-form-bttn {
   margin-top: 35px;
 }
 /* Search bar */
@@ -363,7 +379,7 @@ body {
   justify-content: space-between;
   flex: 1 0 30%; /* adjust as needed */
   overflow: hidden;
-} 
+}
 
 .about-title {
   font-weight: bolder;

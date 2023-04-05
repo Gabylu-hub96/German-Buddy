@@ -3,7 +3,6 @@ import axios from "../axiosInstance";
 import { useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import RegisterImg from "../Images/register-form-img.jpg";
 
 function Register({ setIsLoggedin }) {
   const navigate = useNavigate();

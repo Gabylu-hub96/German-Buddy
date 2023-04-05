@@ -20,14 +20,14 @@ body {
 
 .App {
   text-align: center;
-  background-color: #ffbf99;
+  background-color: antiquewhite;
   font-family: var(--font-raleway), var(--font-roboto);
 }
 
 /* Navbar*/
 
 .my-navbar-container {
-  background-color: hsla(13, 41%, 26%, 0.812);
+  background-color: antiquewhite;
   font-family: var(--font-roboto);
   border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
@@ -101,8 +101,7 @@ body {
 }
 
 #login-bttn,
-#register-bttn,
-#register-form-bttn {
+#register-bttn {
   background: black;
   color: #fcf3eb;
   letter-spacing: 2px;
@@ -119,11 +118,36 @@ body {
   cursor: pointer;
   outline: none;
 }
+#register-form-bttn,
+#login-form-bttn {
+  font-weight: bold;
+  background: #fcf3eb;
+  color: #000000;
+  letter-spacing: 2px;
+  margin: 10px auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+  padding: 10px 30px;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
 #login-bttn:hover,
-#register-bttn:hover,
-#register-form-bttn:hover {
-  background-color: #ff5757;
+#register-bttn:hover {
+  background-color: #f96632;
   color: #fcf3eb;
+  box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
+  transform: translateY(-7px);
+}
+#register-form-bttn:hover,
+#login-form-bttn:hover {
+  background-color: #000000;
+  color: #ffffff;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);
 }
@@ -131,14 +155,13 @@ body {
 
 /* Register Form */
 
-.register-form-container {
-  padding: 100px;
+.register-form-container,
+.login-form-container {
+  padding: 80px;
   margin: 80px;
 }
-/*.form-left-container {
-  width: 50%;
-}*/
-.form-input-content {
+.form-input-content,
+.login-left-container {
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -153,11 +176,11 @@ body {
   background-size: cover;
 }
 
-#register-form-content {
+#register-form-content,
+#login-form-content {
   display: flex;
   flex-direction: row;
-  /* margin: auto; */
-  background-color: #dc35459c;
+  background-color: #f96632;
   box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
   border-radius: 15px;
 }
@@ -165,7 +188,22 @@ body {
   font-weight: bolder;
   margin: 10px;
 }
-#register-form-bttn {
+.login-left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-right-container {
+  background-image: url(./Images/Login-form-img.png);
+  background-color: #fefcff;
+  background-position: center;
+  width: 50%;
+  background-size: cover;
+}
+
+#register-form-bttn,
+#login-form-bttn {
   margin-top: 35px;
 }
 /* Search ends */
@@ -312,7 +350,7 @@ body {
 }
 
 .card-body {
-  background-color: hsla(13, 41%, 26%, 0.812);
+  background-color: #f96632;
   border: 0;
 }
 .card button {
@@ -376,7 +414,113 @@ body {
 .about-title {
   font-weight: bolder;
 }
+/* about ends */
 
+/* Checklist */
+.checklist-header {
+  margin: 20px;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.638);
+  font-weight: bold;
+}
+.checklists {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: baseline;
+  gap: 40px;
+  padding: 10px;
+  margin: 10px;
+}
+.docs-checklist,
+.steps-checklist {
+  background-color: #f96632;
+  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
+  border-radius: 20px;
+  width: 45%;
+  margin-left: 20px;
+}
+.docs-list,
+.steps-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.docs-content,
+.steps-content {
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+}
+.docs-item,
+.steps-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  font-weight: bold;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  font: inherit;
+  color: currentColor;
+  width: 2.15em;
+  height: 2.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 1.65em;
+  height: 1.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+input[type="checkbox"]:disabled {
+  --form-control-color: var(--form-control-disabled);
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+#progress-bar {
+  background-color: rgb(255, 255, 255);
+  --bs-progress-bar-bg: #ffab07;
+  font-size: large;
+  font-weight: bold;
+  height: 4vh;
+  height: 4vh;
+  margin: 15px;
+}
+.steps-list-img {
+  display: flex;
+  /* flex-direction: column;
+  align-items: center;
+  width: 50%; */
+}
+
+/* Checklist ends */
+
+/* Footer */
 .footer {
   color: white;
   background-color: rgb(26, 23, 23);
@@ -425,6 +569,9 @@ footer h4 {
   justify-content: space-around;
   display: inline-block;
 }
+
+/* Footer */
+
 .text-center-button {
   background: black;
   color: #fcf3eb;
@@ -455,3 +602,4 @@ footer h4 {
   margin: 5rem;
   justify-self: flex-end;
 }
+

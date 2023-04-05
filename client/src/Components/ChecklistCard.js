@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "../axiosInstance";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import { Button, Card, Form, Container } from "react-bootstrap";
+import ListGroup from "react-bootstrap/ListGroup";
+import CheckListImg from "../Images/checklist-img.png";
 
 const CheckListCard = (props) => {
   const navigate = useNavigate();
@@ -69,52 +72,75 @@ const CheckListCard = (props) => {
 
   return (
     <>
-      <div className="checkList">
-        <div></div>
-        <h1>Checklist of necessary documents for {checkList.category}</h1>
-        {checkList.documents.map((document) => {
-          return (
-            <div key={document._id}>
-              <h4>
-                <input
-                  type="checkbox"
-                  checked={document.isCompleted}
-                  onChange={() => handleChange(document)}
-                />
-                {document.title}
-              </h4>
-              <p>{document.description}</p>
-            </div>
-          );
-        })}
-        <ProgressBar
-          animated
-          now={docsPercentage}
-          label={`${Math.ceil(docsPercentage)}%`}
-        />
-        <h1>Checklist of necessary steps for {checkList.category}</h1>
-        {checkList.steps.map((step) => {
-          return (
-            <div key={step._id}>
-              <h4>
-                {" "}
-                <input
-                  type="checkbox"
-                  checked={step.isCompleted}
-                  onChange={() => handleStepChange(step)}
-                />
-                {step.title}
-              </h4>
-              <p>{step.description}</p>
-            </div>
-          );
-        })}
-        <ProgressBar
-          animated
-          now={stepsPercentage}
-          label={`${Math.ceil(stepsPercentage)}%`}
-        />
-      </div>
+      <Container fluid className="checklists">
+        <Form className="docs-checklist">
+          <Form.Group>
+            <h2 className="checklist-header">
+              {" "}
+              Necessary documents for {checkList.category}:
+            </h2>
+            {checkList.documents.map((document) => {
+              return (
+                <div key={document._id}>
+                  <Container fluid className="docs-list">
+                    <ListGroup className="docs-content">
+                      <ListGroup.Item className="docs-item">
+                        {document.title}
+                        {document.description}
+                      </ListGroup.Item>
+                    </ListGroup>
+                    <input
+                      className=""
+                      type="checkbox"
+                      checked={document.isCompleted}
+                      onChange={() => handleChange(document)}
+                    />
+                  </Container>
+                </div>
+              );
+            })}
+            <ProgressBar
+              animated
+              now={docsPercentage}
+              id="progress-bar"
+              label={`${Math.ceil(docsPercentage)}%`}
+            />
+          </Form.Group>
+        </Form>
+        <Form className="steps-checklist">
+          <Form.Group>
+            <h2 className="checklist-header">
+              Necessary steps for {checkList.category}:
+            </h2>
+            {checkList.steps.map((step) => {
+              return (
+                <div key={step._id}>
+                  <Container fluid className="steps-list">
+                    <ListGroup className="steps-content">
+                      <ListGroup.Item className="steps-item">
+                        {step.title}
+                        {step.description}
+                      </ListGroup.Item>
+                    </ListGroup>
+                    <input
+                      type="checkbox"
+                      checked={step.isCompleted}
+                      onChange={() => handleStepChange(step)}
+                    />
+                  </Container>
+                </div>
+              );
+            })}
+            <ProgressBar
+              animated
+              now={stepsPercentage}
+              id="progress-bar"
+              label={`${Math.ceil(stepsPercentage)}%`}
+            />
+          </Form.Group>
+          <img src={CheckListImg} alt="Logo" width="400" height="400" />
+        </Form>
+      </Container>
     </>
   );
 };

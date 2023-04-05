@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "../axiosInstance";
 import { useNavigate } from "react-router-dom";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 function Login({ setIsLoggedin }) {
   const navigate = useNavigate();
@@ -26,23 +28,33 @@ function Login({ setIsLoggedin }) {
       });
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="">Email:</label>
-      <input
-        type="email"
-        name="email"
-        value={user.email}
-        onChange={handleChange}
-      />
-      <label htmlFor="">Password:</label>
-      <input
-        type="text"
-        name="password"
-        value={user.password}
-        onChange={handleChange}
-      />
-      <button>Login</button>
-    </form>
+    <Form onSubmit={handleSubmit} className="login-form-container">
+      <Form.Group
+        className="mb-3"
+        controlId="login-form"
+        id="login-form-content">
+        <div className="login-left-container">
+          <Form.Label className="form-label">Email:</Form.Label>
+          <Form.Control
+            type="email"
+            name="email"
+            value={user.email}
+            onChange={handleChange}
+          />
+          <Form.Label className="form-label">Password:</Form.Label>
+          <Form.Control
+            type="text"
+            name="password"
+            value={user.password}
+            onChange={handleChange}
+          />
+          <Button type="submit" id="login-form-bttn">
+            Login
+          </Button>
+        </div>
+        <div className="login-right-container"></div>
+      </Form.Group>
+    </Form>
   );
 }
 

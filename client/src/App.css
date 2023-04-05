@@ -372,7 +372,7 @@ body {
 }
 
 .card button:hover {
-  background-color: #efded8;
+  background-color: #f96632;
   color: #fcf3eb;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);
@@ -549,7 +549,7 @@ footer h4 {
   font-size: 1.2rem;
 }
 
- .nav-item {
+.nav-item {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -570,10 +570,13 @@ footer h4 {
   justify-content: space-around;
   display: inline-block;
 }
-.subscribe-btn{
+.subscribe-btn {
   color: #f96632;
 }
 
+.footer-link:hover{
+  color: #ffab07;
+}
 /* Footer */
 /* contact form */
 

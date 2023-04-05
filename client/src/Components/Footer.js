@@ -54,10 +54,10 @@ const Footer = () => {
         <div className="col-lg-4 col-md-6 col-xs-12 mb-3">
           <h4 className="mb-4">FIND OUT MORE</h4>
           <ul className="nav flex-column">
-            <Link className="nav-item mb-2" to="/">
+            <Link className="footer-link nav-item mb-2" to="/">
               HOME
             </Link>
-            <Link className="nav-item mb-2" to="/Categories">
+            <Link className="footer-link nav-item mb-2" to="/Categories">
               CATEGORIES
             </Link>
           </ul>
@@ -66,10 +66,10 @@ const Footer = () => {
         <div className="col-lg-4 col-md-8 col-xs-12 mb-3 ">
           <h4 className="mb-4">JOIN THE FAMILY</h4>
           <ul className="nav flex-column">
-            <Link className="nav-item mb-2" to="/About">
+            <Link className="footer-link nav-item mb-2" to="/About">
               ABOUT US
             </Link>
-            <Link className="nav-item mb-2" to="/Contact">
+            <Link className="footer-link nav-item mb-2" to="/Contact">
               CONTACT US
             </Link>
           </ul>

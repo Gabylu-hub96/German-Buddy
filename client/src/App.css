@@ -266,11 +266,13 @@ body {
   height: auto;
   margin: 0rem;
   padding: 0rem;
+  margin-bottom: -5rem;
+  display: flex;
 }
 
 .left-column p {
   color: #b20d0d;
-  font-size: 20px;
+  width: 100%;
   font-weight: bolder;
 }
 
@@ -279,6 +281,23 @@ body {
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
+  margin-right: 0rem;
+  margin-bottom: 2rem;
+}
+
+.right-image {
+  width: 60%;
+  display: flex;
+  justify-self: auto;
+  margin-left: 5rem;
+}
+
+.image-container {
+  display: inline-block;
+  align-self: auto;
+  display: flex;
+  flex-wrap: wrap; /* wrap the cards to multiple lines */
+  justify-content: space-between;
 }
 
 /* Card Styling */
@@ -363,7 +382,7 @@ body {
   justify-content: space-between;
   flex: 1 0 30%; /* adjust as needed */
   overflow: hidden;
-} 
+}
 
 .about-title {
   font-weight: bolder;

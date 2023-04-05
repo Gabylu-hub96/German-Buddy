@@ -1,6 +1,8 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { NavLink } from "react-router-dom";
+import MyUser from "./UserPage";
 
 const Categories = () => {
   return (
@@ -100,7 +102,9 @@ const Categories = () => {
                       <li>And Others</li>
                     </ul>
                   </Card.Text>
-                  <Button variant="primary">Add checkList</Button>
+                  <NavLink className="nav-link" to={"/register"}>
+                    <Button variant="primary">Add checkList</Button>
+                  </NavLink>
                 </Card.Body>
               </Card>
             </div>
@@ -117,7 +121,9 @@ const Categories = () => {
                       <li>And others</li>
                     </ul>
                   </Card.Text>
-                  <Button variant="primary">Add checkList</Button>
+                  <NavLink className="nav-link" to={"/register"}>
+                    <Button variant="primary">Add checkList</Button>
+                  </NavLink>
                 </Card.Body>
               </Card>
             </div>
@@ -134,9 +140,9 @@ const Categories = () => {
                       <li>And Others</li>
                     </ul>
                   </Card.Text>
-                  <Button className="card-button" variant="primary">
-                    Add checkList
-                  </Button>
+                  <NavLink className="nav-link" to={"/register"}>
+                    <Button variant="primary">Add checkList</Button>
+                  </NavLink>
                 </Card.Body>
               </Card>
             </div>

@@ -11,8 +11,21 @@ const Categories = () => {
         </p>
         <div className="text-container">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
-            lorem sed.
+            <b>
+              The section of our web app is designed for expatriates navigating
+              German bureaucracy serves as a hub for organizing relevant topics
+              and resources. Our app aims to simplify the process of completing
+              bureaucratic tasks by providing users with clear and concise
+              information on each category. This page serves as a directory for
+              users to easily access different sections of the app, including
+              visa applications, residency registration, taxes, and healthcare.
+              Through this user-friendly interface, expatriates can easily find
+              and access the information they need to navigate the complex
+              German bureaucracy system. Our app utilizes modern web
+              technologies and responsive design to ensure that users can access
+              the categories page from any device and have a seamless user
+              experience.
+            </b>
           </p>
         </div>
         <div className="category-con">

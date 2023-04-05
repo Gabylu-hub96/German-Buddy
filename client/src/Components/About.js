@@ -1,5 +1,4 @@
 import React from "react";
-import HeroInternal from "./HeroInternal";
 import Container from "react-bootstrap/Container";
 import kimsandra from "../Images/sandra.jpeg";
 import Gabriela from "../Images/gabriela.jpeg";
@@ -17,12 +16,12 @@ function AboutPage() {
       <div className="text-container">
         <p>
           <b>
-            Welcome to German Buddy. We are 2 Students from WBS Coding School,
-            and we were happy to work together on this React Project using the
+            Welcome to German Buddy. We are Students from WBS Coding School, and
+            we are happy to work together on this React Project using the
             knowledge we have gained throughout the Bootcamp to create our final
             Full Stack Web Application. We hope German Buddy would become your
             best place to find trusted and accurate information about resettling
-            in the United States.
+            in the Germany.
           </b>
         </p>
         <iframe
@@ -33,7 +32,8 @@ function AboutPage() {
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+          allowfullscreen
+        ></iframe>
       </div>
       <div className="about-container">
         <p>
@@ -77,7 +77,7 @@ function AboutPage() {
           </p>
         </div>
       </div>
-      <h4 className="mt-3 text-start lora-font"></h4>
+      <h4 className="md-3 text-start lora-font"></h4>
       <br />
       <div className="about-con">
         <div className="row">
@@ -124,7 +124,8 @@ function AboutPage() {
                   Through the German Buddy community, users can receive
                   up-to-date information, send direct messages and receive
                   in-language support for their questions, and attend live
-                  events with other foreigners in the country.
+                  events with other foreigners in the country. Find out more
+                  about the culture, enviroment, and people in your new country.
                 </Card.Text>
               </Card.Body>
             </Card>

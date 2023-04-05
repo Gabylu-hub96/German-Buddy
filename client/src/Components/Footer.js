@@ -29,9 +29,7 @@ const Footer = () => {
                 aria-label="Email address"
                 aria-describedby="basic-addon2"
               />
-              <Button variant="btn btn-warning square-pill">
-                <span className="material-symbols-sharp">Subscribe</span>
-              </Button>
+              <Button type="subscribe">Subscribe</Button>
             </InputGroup>
           </div>
 
@@ -136,7 +134,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className="footer-hr"/>
+      <hr className="footer-hr" />
       <div className="copyright">
         <p className="col-sm">
           &copy;{new Date().getFullYear()} German Buddy | All Rights Reserved |
@@ -144,9 +142,8 @@ const Footer = () => {
         </p>
         <p>Final Group Project</p>
       </div>
-
     </footer>
   );
-}
+};
 
 export default Footer;

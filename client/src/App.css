@@ -524,10 +524,10 @@ input[type="checkbox"]:disabled {
 .footer {
   color: white;
   background-color: rgb(26, 23, 23);
-  padding-top: 3em;
   position: relative;
-  bottom: 0;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .copyright {
@@ -551,11 +551,7 @@ footer h4 {
   text-decoration: none;
   color: white;
 }
-#footer .input-group > .form-control,
-.input-group > .form-floating,
-.input-group > .form-select {
-  height: calc(3.5rem + 2px);
-}
+
 #footer svg {
   color: rgb(255, 255, 255);
 }
@@ -571,6 +567,7 @@ footer h4 {
 }
 
 /* Footer */
+/* contact form */
 
 .text-center-button {
   background: black;
@@ -586,8 +583,6 @@ footer h4 {
   cursor: pointer;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
 }
 .text-center-button:hover {
   background-color: #ff5757;
@@ -595,6 +590,7 @@ footer h4 {
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);
 }
+/* contact form ends */
 
 .new-container {
   justify-content: space-evenly;
@@ -602,4 +598,3 @@ footer h4 {
   margin: 5rem;
   justify-self: flex-end;
 }
-

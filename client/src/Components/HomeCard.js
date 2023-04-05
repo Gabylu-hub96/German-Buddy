@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 
 const HomeCard = () => {
   return (
-    <div className="card-container">
+    <div className="home-container">
       <p className="card-text">
         <b>Explore our website and Services</b>
       </p>
@@ -24,7 +24,8 @@ const HomeCard = () => {
         <div className="col-md-4">
           <Card className="custom-card">
             <Card.Body>
-              <Card.Title className="card-title">Experience Our Community</Card.Title>
+
+              <Card.Title className="card-title">Experience Our Community </Card.Title>
               <Card.Text>
                 Always stay connected through our community tab and talk to
                 people that were in your shoes before

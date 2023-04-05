@@ -1,72 +1,143 @@
 import React from "react";
 import HeroInternal from "./HeroInternal";
+import Container from "react-bootstrap/Container";
+import kimsandra from "../Images/sandra.jpeg";
+import Gabriela from "../Images/gabriela.jpeg";
+import ReactPlayer from "react-player";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-const AboutPage = () => {
+function About() {
   return (
-    <div className="container">
-      <h2>About Us</h2>
+    <div className="home-container">
+      <div className="row"></div>
+      <p className="card-text">
+        <b>About German Buddy</b>
+      </p>
       <div className="text-container">
-        We are a team of developers creating awesome web apps!
+        <p>
+          <b>
+            Welcome to German Buddy. We are 2 Students from WBS Coding School,
+            and we were happy to work together on this React Project using the
+            knowledge we have gained throughout the Bootcamp to create our final
+            Full Stack Web Application. We hope German Buddy would become your
+            best place to find trusted and accurate information about resettling
+            in the United States.
+          </b>
+        </p>
+        <iframe
+          className="youtube-container "
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/61HJ8AuERto"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
-      <p className="categories-text"></p>
-
-      <div className="images">
-        <img className="row col-md-4" src="image1.jpg" alt="Image 1" />
+      <div className="about-container">
+        <p>
+          <b>
+            Our mission is to make your life easier by providing you with a
+            user-friendly platform that helps you accomplish your goals while
+            you plaan to relocate to Germany. We believe that technology should
+            be accessible to everyone, and that's why we've designed our
+            application to be intuitive, efficient, and reliable. We are
+            dedicated professionals who are passionate about creating software
+            that makes a difference. We've poured our hearts and souls into
+            every aspect of this application, from the user interface to the
+            back-end code. We understand that your time is valuable, and that's
+            why we've focused on creating an application that is fast,
+            responsive, and always available when you need it. We've also made
+            sure that our application is secure, so you can trust that your data
+            is protected at all times. Whether you're a professional, a student,
+            or just spouse looking to relocate to Germany, our application is
+            here to help. We've designed it to be flexible and adaptable, so it
+            can meet your unique needs and help you achieve your goals. So why
+            not give our application a try? We're confident that you'll love it
+            as much as we do, and we look forward to hearing your feedback as we
+            continue to improve and refine this platform. Best regards, The Team
+            at German Buddy.
+          </b>
+        </p>
+      </div>
+      <div className="about-image">
         <div className="row">
-          <img className="row col-md-4" src="image2.jpg" alt="Image 2" />
+          <div className="col-md-4">
+            <img src={kimsandra} alt="Kimsandra" className="thumbnail" />
+            <p className="names">
+              <b>KIMSANDRA</b>
+            </p>
+          </div>
+        </div>
+        <div className="">
+          <img src={Gabriela} alt="Gabriela" className="thumbnail" />
+          <p className="names">
+            <b>GaABRIELA</b>
+          </p>
         </div>
       </div>
-      <img className="row col-md-4" src="image3.jpg" alt="Image 3" />
-
-      <div className="row">
-        <div className="col-md-4">
-          <Card className="custom-card">
-            <Card.Body>
-              <Card.Title className="card-title">
-                Gabriela Andrade Juarez
-              </Card.Title>
-              <Card.Text>
-                Experts in the field of bureaucracy are here to help you from
-                Monday to Friday with anything you might need!{" "}
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="col-md-4">
-          <Card className="custom-card">
-            <Card.Body>
-              <Card.Title className="card-title">
-                Kimsandra Oladimeji
-              </Card.Title>
-              <Card.Text>
-                Always stay connected through our community tab and talk to
-                people that were in your shoes before
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="col-md-4">
-          <Card className="custom card">
-            <Card.Body>
-              <Card.Title className="card-title">Name</Card.Title>
-              <Card.Text>
-                Explore our bite-sized articles about living abroad with some of
-                the most important information
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="text-container">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel
-            lorem sed.
-          </p>
+      <h4 className="mt-3 text-start lora-font"></h4>
+      <br />
+      <div className="about-con">
+        <div className="row">
+          <div className="col-md-4">
+            <Card className="custom-card">
+              <Card.Body>
+                <Card.Title className="about-title">
+                  <b>German Buddy Website </b>
+                </Card.Title>
+                <Card.Text>
+                  The German Buddy website intends to provide hundreds of
+                  resources including videos, podcasts, and fact sheets to help
+                  expatriates migrating to Germany. Topics you will find on our
+                  website include cultural adjustment, employment, housing,
+                  German laws, and more. All of these are available in all
+                  languages.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="col-md-4">
+            <Card className="custom-card">
+              <Card.Body>
+                <Card.Title className="about-title">
+                  <b>
+                  German Buddy App{" "}
+                  </b>
+                </Card.Title>
+                <Card.Text>
+                  The German Buddy app is something we hope to develope in the
+                  future. The App is expected to make available short videos,
+                  interactive lessons, and badges to reward and track German
+                  language learning progress. When this is all set, you would be
+                  able to download from the Apple Store or Google Play.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="col-md-4">
+            <Card className="custom card">
+              <Card.Body>
+                <Card.Title className="card-title">
+                  <b>
+                  Community Activities
+                  </b>
+                </Card.Title>
+                <Card.Text>
+                  Through the German Buddy community, users can receive
+                  up-to-date information, send direct messages and receive
+                  in-language support for their questions, and attend live
+                  events with other foreigners in the country.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default AboutPage;

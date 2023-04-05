@@ -10,6 +10,7 @@ import Register from "./Components/Register";
 import MyCheckLists from "./Components/CheckListPage";
 import { useState } from "react";
 import MyNavbar from "./Components/MyNavbar";
+import Footer from "./Components/Footer";
 import MyProfile from "./Components/UserPage";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/myChecklists" element={<MyCheckLists />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

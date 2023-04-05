@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Carousel } from "react-bootstrap";
 import Image from "react-bootstrap";
-import Logo from "../Images/Logo.png";
+import Logo from "../Images/Logo2.png";
 
 const HomeCarousel = () => {
   return (

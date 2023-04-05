@@ -15,10 +15,24 @@ function Contact() {
 
   return (
     <>
+      <div className="row-md-4">
+        <p className="card-text">
+          <b>CONTACT US @ GERMAN BUDDY</b>
+        </p>
+      </div>
       <div className="text-container">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel lorem
-          sed.
+          <b>
+            Feel free to reach out to us via the various forms of communication
+            such as phone calls, emails, text messages, or even through our
+            social media platforms and direct messages. This is oe way we
+            believe we can not only improve our services but also connect with
+            users, who are either contacting for help or support. A way to also
+            share information, or simply give feedback on user satisfaction.
+            "Reaching out" can be a powerful tool for building relationships and
+            maintaining connections with others, especially in today's world
+            where technology has made communication easier than ever before.
+          </b>
         </p>
       </div>
       <section id="" className="contact">
@@ -110,13 +124,13 @@ function Contact() {
                 <div className="my-3">
                   <div className="loading">Loading</div>
                   <div className="error-message"></div>
-                  <div className="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
                 </div>
-                <div className="text-center">
+                <div className="text-center-button">
                   <button type="submit">Send Message</button>
                 </div>
+                <br />
+                <br />
+                <div></div>
               </form>
             </div>
           </div>

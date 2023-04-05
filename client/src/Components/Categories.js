@@ -94,7 +94,7 @@ const Categories = () => {
                     Family Reunion{" "}
                   </Card.Title>
                   <Card.Text>
-                    <ul>
+                    <ul className="doc-list">
                       <li>Get a valid passport</li>
                       <li>A completed application form</li>
                       <li>Birth certificates</li>
@@ -113,7 +113,7 @@ const Categories = () => {
                 <Card.Body>
                   <Card.Title className="card-title">Study Visa </Card.Title>
                   <Card.Text>
-                    <ul>
+                    <ul className="doc-list">
                       <li>Get a valid Passport</li>
                       <li>Secure your admission Letter</li>
                       <li>Complete your application form</li>
@@ -132,7 +132,7 @@ const Categories = () => {
                 <Card.Body>
                   <Card.Title className="card-title">Working Visa</Card.Title>
                   <Card.Text>
-                    <ul>
+                    <ul className="doc-list">
                       <li>Get a valid passport</li>
                       <li>Prepare registration forms</li>
                       <li>Get your account statements</li>

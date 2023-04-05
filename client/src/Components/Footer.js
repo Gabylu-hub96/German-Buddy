@@ -23,13 +23,19 @@ const Footer = () => {
           </div>
 
           <div className="col-lg-4 col-md-8 col-xs-12 mb-3">
-            <InputGroup className="mb-3">
+            <InputGroup className="subscribe-btn">
               <Form.Control
                 placeholder="Email address"
                 aria-label="Email address"
                 aria-describedby="basic-addon2"
               />
-              <Button type="subscribe">Subscribe</Button>
+              <Button
+                variant="btn btn-warning"
+                color="#ff5757"
+                type="subscribe"
+              >
+                Subscribe
+              </Button>
             </InputGroup>
           </div>
 
@@ -79,7 +85,7 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
-                  fill="currentColor"
+                  fill="#f96632"
                   className="bi bi-linkedin"
                   viewBox="0 0 16 16"
                 >
@@ -94,7 +100,7 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
-                  fill="currentColor"
+                  fill="#f96632"
                   className="bi bi-facebook"
                   viewBox="0 0 16 16"
                 >
@@ -108,7 +114,7 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
-                  fill="currentColor"
+                  fill="#f96632"
                   className="bi bi-instagram"
                   viewBox="0 0 16 16"
                 >
@@ -122,7 +128,7 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
                   height="30"
-                  fill="currentColor"
+                  fill="#f96632"
                   className="bi bi-twitter"
                   viewBox="0 0 16 16"
                 >

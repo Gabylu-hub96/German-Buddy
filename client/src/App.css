@@ -27,7 +27,7 @@ body {
 /* Navbar*/
 
 .my-navbar-container {
-  background-color: antiquewhite;
+  background-color: #f96632;
   font-family: var(--font-roboto);
   border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
@@ -210,7 +210,7 @@ body {
 
 .text-container {
   display: flex;
-  background-color: hsla(13, 41%, 26%, 0.812);
+  background-color: #f96632;
   max-width: 100%;
   border: 2px solid #ccc;
   box-shadow: 0 0 5px #ccc;
@@ -292,7 +292,7 @@ body {
 }
 
 .left-column button:hover {
-  background-color: #ff5757;
+  background-color: #f96632;
   color: #fcf3eb;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);
@@ -372,7 +372,7 @@ body {
 }
 
 .card button:hover {
-  background-color: #ff5757;
+  background-color: #efded8;
   color: #fcf3eb;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);
@@ -389,6 +389,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.doc-list {
+  list-style: none;
+  font-weight: bolder;
+  align-content: center;
 }
 
 .custom-card {
@@ -536,7 +541,7 @@ input[type="checkbox"]:disabled {
   align-content: space-between;
 }
 .footer-hr {
-  color: gold;
+  color: #f96632;
 }
 footer h4 {
   font-family: "Roboto", sans-serif;
@@ -544,16 +549,16 @@ footer h4 {
   font-size: 1.2rem;
 }
 
-#footer .nav-item {
+ .nav-item {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   text-decoration: none;
-  color: white;
+  color: #f96632;
 }
 
 #footer svg {
-  color: rgb(255, 255, 255);
+  color: #f96632;
 }
 
 .image-container {
@@ -564,6 +569,9 @@ footer h4 {
   max-width: 35%;
   justify-content: space-around;
   display: inline-block;
+}
+.subscribe-btn{
+  color: #f96632;
 }
 
 /* Footer */

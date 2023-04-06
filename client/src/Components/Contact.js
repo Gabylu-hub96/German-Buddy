@@ -1,10 +1,9 @@
 import React from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-
 import "leaflet/dist/leaflet.css";
+
 function Contact() {
   const position = [52.45588949917658, 13.389077598470479];
   const markerIcon = new L.Icon({
@@ -81,8 +80,10 @@ function Contact() {
                 className="php-email-form"
               >
                 <div className="row">
-                  <div className="form-group col-md-6">
-                    <label htmlFor="name">Your Name</label>
+                  <div className="form-group">
+                    <label htmlFor="name">
+                      <b>Full Name</b>
+                    </label>
                     <input
                       type="text"
                       name="name"
@@ -91,8 +92,10 @@ function Contact() {
                       required
                     />
                   </div>
-                  <div className="form-group col-md-6">
-                    <label htmlFor="name">Your Email</label>
+                  <div className="form-group">
+                    <label htmlFor="name">
+                      <b>Your Email</b>
+                    </label>
                     <input
                       type="email"
                       className="form-control"
@@ -103,7 +106,9 @@ function Contact() {
                   </div>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="name">Subject</label>
+                  <label htmlFor="name">
+                    <b>Subject</b>
+                  </label>
                   <input
                     type="text"
                     className="form-control"
@@ -113,7 +118,9 @@ function Contact() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="name">Message</label>
+                  <label htmlFor="name">
+                    <b>Message</b>
+                  </label>
                   <textarea
                     className="form-control"
                     name="message"
@@ -121,16 +128,13 @@ function Contact() {
                     required
                   ></textarea>
                 </div>
-                <div className="my-3">
-                  <div className="loading">Loading</div>
-                  <div className="error-message"></div>
-                </div>
-                <div className="text-center-button">
+                <br />
+
+                <div className="text-center-button" variant="primary">
                   <button type="submit">Send Message</button>
                 </div>
                 <br />
                 <br />
-                <div></div>
               </form>
             </div>
           </div>

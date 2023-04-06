@@ -27,7 +27,7 @@ body {
 /* Navbar*/
 
 .my-navbar-container {
-  background-color: rgb(0, 0, 0);
+  background-color: #f96632;
   font-family: var(--font-roboto);
   border: 1px solid #000000;
   box-shadow: 0 0 5px #ccc;
@@ -309,7 +309,7 @@ body {
 }
 
 .left-column button:hover {
-  background-color: #ff5757;
+  background-color: #f96632;
   color: #fcf3eb;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);
@@ -337,18 +337,24 @@ body {
 /* Card Styling */
 .card-container {
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
-  font-display: flex;
+  display: flex;
+  
 }
 
 .card {
   max-width: 350px;
   height: 400px;
-  margin: 50px;
+  margin: 5rem;
   padding: 0rem;
   border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
+  flex-basis: 300px;
+ align-items: center;
+ flex-wrap: wrap;
+ 
 }
 
 .card-title {
@@ -393,7 +399,7 @@ body {
 }
 
 .card button:hover {
-  background-color: #ff5757;
+  background-color: #f96632;
   color: #fcf3eb;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);
@@ -410,6 +416,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.doc-list {
+  list-style: none;
+  font-weight: bolder;
+  align-content: center;
 }
 
 .custom-card {
@@ -549,10 +560,10 @@ input[type="checkbox"]:disabled {
 .footer {
   color: white;
   background-color: rgb(26, 23, 23);
-  padding-top: 3em;
   position: relative;
-  bottom: 0;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .copyright {
@@ -561,7 +572,7 @@ input[type="checkbox"]:disabled {
   align-content: space-between;
 }
 .footer-hr {
-  color: gold;
+  color: #f96632;
 }
 footer h4 {
   font-family: "Roboto", sans-serif;
@@ -569,20 +580,16 @@ footer h4 {
   font-size: 1.2rem;
 }
 
-#footer .nav-item {
+.nav-item {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   text-decoration: none;
-  color: white;
+  color: #f96632;
 }
-#footer .input-group > .form-control,
-.input-group > .form-floating,
-.input-group > .form-select {
-  height: calc(3.5rem + 2px);
-}
+
 #footer svg {
-  color: rgb(255, 255, 255);
+  color: #f96632;
 }
 
 .image-container {
@@ -594,8 +601,16 @@ footer h4 {
   justify-content: space-around;
   display: inline-block;
 }
+.subscribe-btn {
+  color: #f96632;
+}
 
+.footer-link:hover {
+  color: #ffab07;
+}
 /* Footer */
+
+/* contact form */
 
 .text-center-button {
   background: black;
@@ -611,15 +626,14 @@ footer h4 {
   cursor: pointer;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
 }
 .text-center-button:hover {
-  background-color: #ff5757;
+  background-color: #f96632;
   color: #fcf3eb;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);
 }
+/* contact form ends */
 
 .new-container {
   justify-content: space-evenly;

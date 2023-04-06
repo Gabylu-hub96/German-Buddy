@@ -1,13 +1,15 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { NavLink } from "react-router-dom";
+import MyUser from "./UserPage";
 
 const Categories = () => {
   return (
     <div className="home-container">
       <div className="row-md-4">
         <p className="card-text">
-          <b>Explore our main categories</b>
+          <b>Explore Our Main Categories</b>
         </p>
         <div className="text-container">
           <p>
@@ -92,7 +94,7 @@ const Categories = () => {
                     Family Reunion{" "}
                   </Card.Title>
                   <Card.Text>
-                    <ul>
+                    <ul className="doc-list">
                       <li>Get a valid passport</li>
                       <li>A completed application form</li>
                       <li>Birth certificates</li>
@@ -100,7 +102,9 @@ const Categories = () => {
                       <li>And Others</li>
                     </ul>
                   </Card.Text>
-                  <Button variant="primary">Add checkList</Button>
+                  <NavLink className="nav-link" to={"/register"}>
+                    <Button variant="primary">Add checkList</Button>
+                  </NavLink>
                 </Card.Body>
               </Card>
             </div>
@@ -109,7 +113,7 @@ const Categories = () => {
                 <Card.Body>
                   <Card.Title className="card-title">Study Visa </Card.Title>
                   <Card.Text>
-                    <ul>
+                    <ul className="doc-list">
                       <li>Get a valid Passport</li>
                       <li>Secure your admission Letter</li>
                       <li>Complete your application form</li>
@@ -117,7 +121,9 @@ const Categories = () => {
                       <li>And others</li>
                     </ul>
                   </Card.Text>
-                  <Button variant="primary">Add checkList</Button>
+                  <NavLink className="nav-link" to={"/register"}>
+                    <Button variant="primary">Add checkList</Button>
+                  </NavLink>
                 </Card.Body>
               </Card>
             </div>
@@ -126,7 +132,7 @@ const Categories = () => {
                 <Card.Body>
                   <Card.Title className="card-title">Working Visa</Card.Title>
                   <Card.Text>
-                    <ul>
+                    <ul className="doc-list">
                       <li>Get a valid passport</li>
                       <li>Prepare registration forms</li>
                       <li>Get your account statements</li>
@@ -134,9 +140,9 @@ const Categories = () => {
                       <li>And Others</li>
                     </ul>
                   </Card.Text>
-                  <Button className="card-button" variant="primary">
-                    Add checkList
-                  </Button>
+                  <NavLink className="nav-link" to={"/register"}>
+                    <Button variant="primary">Add checkList</Button>
+                  </NavLink>
                 </Card.Body>
               </Card>
             </div>

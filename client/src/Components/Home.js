@@ -10,7 +10,6 @@ const Home = () => {
       <HeaderContainer />
       <TextContainer />
       <HomeCarousel />
-
       <HomeCard />
     </div>
   );

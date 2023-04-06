@@ -27,7 +27,7 @@ body {
 /* Navbar*/
 
 .my-navbar-container {
-  background-color: #f96632;
+  background-color: #000000;
   font-family: var(--font-roboto);
   border: 1px solid #000000;
   box-shadow: 0 0 5px #ccc;
@@ -107,7 +107,10 @@ body {
 }
 
 #login-bttn,
-#register-bttn {
+#register-bttn,
+#contact-form-bttn,
+#home-card-bttn,
+#categories-card-bttn {
   background: black;
   color: #fcf3eb;
   letter-spacing: 2px;
@@ -125,7 +128,10 @@ body {
   outline: none;
 }
 #register-form-bttn,
-#login-form-bttn {
+#login-form-bttn,
+#contact-form-bttn,
+#home-card-bttn,
+#categories-card-bttn {
   font-weight: bold;
   background: #fcf3eb;
   color: #000000;
@@ -144,14 +150,19 @@ body {
   outline: none;
 }
 #login-bttn:hover,
-#register-bttn:hover {
+#register-bttn:hover,
+#contact-form-bttn:hover,
+#home-card-bttn:hover,
+#categories-card-bttn:hover {
   background-color: #f96632;
   color: #fcf3eb;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);
 }
 #register-form-bttn:hover,
-#login-form-bttn:hover {
+#login-form-bttn:hover,
+#home-card-bttn:hover,
+#categories-card-bttn:hover {
   background-color: #000000;
   color: #ffffff;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
@@ -340,7 +351,6 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  display: flex;
 }
 
 .card {
@@ -349,10 +359,10 @@ body {
   margin: 5rem;
   padding: 0rem;
   border: 1px solid #ccc;
-  box-shadow: 0 0 5px #ccc;
   flex-basis: 300px;
   align-items: center;
   flex-wrap: wrap;
+  display: flex;
 }
 
 .card-title {
@@ -377,7 +387,9 @@ body {
 .card-body {
   background-color: #f96632;
   border: 0;
+  border-radius: 20px;
 }
+
 .card button {
   background: black;
   color: #fcf3eb;
@@ -642,16 +654,15 @@ footer h4 {
   justify-self: flex-end;
 }
 
-form {
+/* form {
   width: 80%;
   padding: 20px;
   border-radius: 6px;
-  background:#f96632;
+  background: #f96632;
   border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
   margin-bottom: 5rem;
-}
-
+} */
 
 .contact .info i {
   font-size: 20px;

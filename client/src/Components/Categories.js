@@ -103,7 +103,9 @@ const Categories = () => {
                     </ul>
                   </Card.Text>
                   <NavLink className="nav-link" to={"/register"}>
-                    <Button variant="primary">Add checkList</Button>
+                    <Button variant="primary" id="categories-card-bttn">
+                      Add checkList
+                    </Button>
                   </NavLink>
                 </Card.Body>
               </Card>
@@ -122,7 +124,9 @@ const Categories = () => {
                     </ul>
                   </Card.Text>
                   <NavLink className="nav-link" to={"/register"}>
-                    <Button variant="primary">Add checkList</Button>
+                    <Button variant="primary" id="categories-card-bttn">
+                      Add checkList
+                    </Button>
                   </NavLink>
                 </Card.Body>
               </Card>
@@ -141,7 +145,9 @@ const Categories = () => {
                     </ul>
                   </Card.Text>
                   <NavLink className="nav-link" to={"/register"}>
-                    <Button variant="primary">Add checkList</Button>
+                    <Button variant="primary" id="categories-card-bttn">
+                      Add checkList
+                    </Button>
                   </NavLink>
                 </Card.Body>
               </Card>

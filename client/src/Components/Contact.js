@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import Button from "react-bootstrap/Button";
 
 function Contact() {
   const position = [52.45588949917658, 13.389077598470479];
@@ -60,8 +61,7 @@ function Contact() {
                 <MapContainer
                   center={position}
                   zoom={16}
-                  scrollWheelZoom={true}
-                >
+                  scrollWheelZoom={true}>
                   <TileLayer url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=LjeASTEOm5W62yk97NZq" />
                   <Marker position={position} icon={markerIcon}>
                     <Popup>
@@ -77,8 +77,7 @@ function Contact() {
                 action="forms/contact.php"
                 method="post"
                 role="form"
-                className="php-email-form"
-              >
+                className="php-email-form">
                 <div className="row">
                   <div className="form-group">
                     <label htmlFor="name">
@@ -125,14 +124,12 @@ function Contact() {
                     className="form-control"
                     name="message"
                     rows="10"
-                    required
-                  ></textarea>
+                    required></textarea>
                 </div>
                 <br />
-
-                <div className="text-center-button">
-                  <button type="submit">Send Message</button>
-                </div>
+                <Button type="submit" id="contact-form-bttn">
+                  Send Message
+                </Button>
                 <br />
                 <br />
               </form>

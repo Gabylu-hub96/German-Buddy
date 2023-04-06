@@ -320,7 +320,6 @@ body {
   align-items: center;
   max-width: 100%;
   display: flex;
-  
 }
 
 .card {
@@ -331,9 +330,8 @@ body {
   border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
   flex-basis: 300px;
- align-items: center;
- flex-wrap: wrap;
- 
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .card-title {
@@ -378,8 +376,8 @@ body {
 }
 
 .card button:hover {
-  background-color: #f96632;
-  color: #fcf3eb;
+  background-color: #000000;
+  color: #ffffff;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);
 }
@@ -605,8 +603,10 @@ footer h4 {
 .text-center-button:hover {
   background-color: #f96632;
   color: #fcf3eb;
-  box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
+  box-shadow: rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);
+  transition: 0.4s;
+  border-radius: 4px;
 }
 /* contact form ends */
 
@@ -615,4 +615,46 @@ footer h4 {
   display: inline-block;
   margin: 5rem;
   justify-self: flex-end;
+}
+
+form {
+  width: 80%;
+  padding: 20px;
+  border-radius: 6px;
+  background:#f96632;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+  margin-bottom: 5rem;
+}
+
+
+.contact .info i {
+  font-size: 20px;
+  color: #f96632;
+  float: left;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #050d18;
+}
+
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #f96632;
+}
+
+.contact .info .email p {
+  padding-top: 5px;
 }

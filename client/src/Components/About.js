@@ -32,7 +32,8 @@ function AboutPage() {
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+          allowfullscreen
+        ></iframe>
       </div>
       <div className="text-container">
         <p>
@@ -62,16 +63,14 @@ function AboutPage() {
       </div>
       <br />
       <div className="about-image">
-        <div className="row">
-          <div className="col-md-4">
-            <img src={Kimsandra} alt="Kimsandra" className="thumbnail" />
-            <p className="names">
-              <b>GABRIELA</b>
-            </p>
-          </div>
+        <div className="col-md-4">
+          <img src={Gabriela} alt="" className="thumbnail" />
+          <p className="names">
+            <b>GABRIELA</b>
+          </p>
         </div>
         <div className="col-md-4">
-          <img src={kimsandra} alt="Kimsandra" className="thumbnail" />
+          <img src={Kimsandra} alt="Kimsandra" className="thumbnail" />
           <p className="names">
             <b>KIMSANDRA</b>
           </p>
@@ -80,56 +79,53 @@ function AboutPage() {
       <h4 className="md-3 text-start lora-font"></h4>
       <br />
       <div className="about-con">
-        <div className="row">
-          <div className="col-md-4">
-            <Card className="custom-card">
-              <Card.Body>
-                <Card.Title className="about-title">
-                  <b>German Buddy Website </b>
-                </Card.Title>
-                <Card.Text>
-                  The German Buddy website intends to provide hundreds of
-                  resources including videos, podcasts, and fact sheets to help
-                  expatriates migrating to Germany. Topics you will find on our
-                  website include cultural adjustment, employment, housing,
-                  German laws, and more. All of these are available in all
-                  languages.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-          <div className="col-md-4">
-            <Card className="custom-card">
-              <Card.Body>
-                <Card.Title className="about-title">
-                  <b>German Buddy App </b>
-                </Card.Title>
-                <Card.Text>
-                  The German Buddy app is something we hope to develope in the
-                  future. The App is expected to make available short videos,
-                  interactive lessons, and badges to reward and track German
-                  language learning progress. When this is all set, you would be
-                  able to download from the Apple Store or Google Play.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-          <div className="col-md-4">
-            <Card className="custom card">
-              <Card.Body>
-                <Card.Title className="card-title">
-                  <b>Community Activities</b>
-                </Card.Title>
-                <Card.Text>
-                  Through the German Buddy community, users can receive
-                  up-to-date information, send direct messages and receive
-                  in-language support for their questions, and attend live
-                  events with other foreigners in the country. Find out more
-                  about the culture, enviroment, and people in your new country.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
+        <div className="col-md-4">
+          <Card className="custom-card">
+            <Card.Body>
+              <Card.Title className="about-title">
+                <b>German Buddy Website </b>
+              </Card.Title>
+              <Card.Text>
+                The German Buddy website intends to provide hundreds of
+                resources including videos, podcasts, and fact sheets to help
+                expatriates migrating to Germany. Topics you will find on our
+                website include cultural adjustment, employment, housing, German
+                laws, and more. All of these are available in all languages.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className="col-md-4">
+          <Card className="custom-card">
+            <Card.Body>
+              <Card.Title className="about-title">
+                <b>German Buddy App </b>
+              </Card.Title>
+              <Card.Text>
+                The German Buddy app is something we hope to develope in the
+                future. The App is expected to make available short videos,
+                interactive lessons, and badges to reward and track German
+                language learning progress. When this is all set, you would be
+                able to download from the Apple Store or Google Play.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </div>
+        <div className="col-md-4">
+          <Card className="custom card">
+            <Card.Body>
+              <Card.Title className="card-title">
+                <b>Community Activities</b>
+              </Card.Title>
+              <Card.Text>
+                Through the German Buddy community, users can receive up-to-date
+                information, send direct messages and receive in-language
+                support for their questions, and attend live events with other
+                foreigners in the country. Find out more about the culture,
+                enviroment, and people in your new country.
+              </Card.Text>
+            </Card.Body>
+          </Card>
         </div>
       </div>
     </div>

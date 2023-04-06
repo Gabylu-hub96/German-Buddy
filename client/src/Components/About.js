@@ -78,7 +78,7 @@ function AboutPage() {
       <h4 className="md-3 text-start lora-font"></h4>
       <br />
       <div className="about-con">
-        <div className="col-md-4">
+        <div className="col-md-4" id="category-card">
           <Card className="custom-card">
             <Card.Body>
               <Card.Title className="about-title">
@@ -94,7 +94,7 @@ function AboutPage() {
             </Card.Body>
           </Card>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4" id="category-card">
           <Card className="custom-card">
             <Card.Body>
               <Card.Title className="about-title">
@@ -110,7 +110,7 @@ function AboutPage() {
             </Card.Body>
           </Card>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4" id="category-card">
           <Card className="custom card">
             <Card.Body>
               <Card.Title className="card-title">

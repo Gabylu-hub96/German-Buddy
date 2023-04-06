@@ -3,13 +3,10 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { LinkContainer } from "react-router-bootstrap";
-import Logo from "../Images/Logo2.png";
+import FistPump from "../Images/Logo-fist-pump.png";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "../axiosInstance";
-import CheckListIcon from "../Images/checklist-icon.png";
-import LogoutIcon from "../Images/logout.png";
-import MyUser from "./UserPage";
 import UserIcon from "../Images/user-icon.png";
 
 const MyNavbar = ({ isLoggedin, setIsLoggedin }) => {
@@ -37,10 +34,10 @@ const MyNavbar = ({ isLoggedin, setIsLoggedin }) => {
         <LinkContainer to="/">
           <Navbar.Brand>
             <img
-              src={Logo}
+              src={FistPump}
               alt="Logo"
-              width="100"
-              height="100"
+              width="120"
+              height="120"
               className="d-inline-block align-top"
             />
           </Navbar.Brand>
@@ -49,7 +46,9 @@ const MyNavbar = ({ isLoggedin, setIsLoggedin }) => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto" id="nav-items">
             <LinkContainer to="/">
-              <Nav.Link className="nav-link-item">Home</Nav.Link>
+              <Nav.Link className="nav-link-item" id="nav-link">
+                Home
+              </Nav.Link>
             </LinkContainer>
             <LinkContainer to="/about">
               <Nav.Link className="nav-link-item">About</Nav.Link>
@@ -70,8 +69,8 @@ const MyNavbar = ({ isLoggedin, setIsLoggedin }) => {
                 <img
                   src={UserIcon}
                   alt="user"
-                  width="60"
-                  height="60"
+                  width="70"
+                  height="70"
                   className="d-inline-block align-top"
                   id="user-icon-img"
                 />

@@ -75,10 +75,10 @@ const CheckListCard = (props) => {
       <Container fluid className="checklists">
         <Form className="docs-checklist">
           <Form.Group>
-            <h2 className="checklist-header">
+            <h1 className="checklist-header">
               {" "}
               Necessary documents for {checkList.category}:
-            </h2>
+            </h1>
             {checkList.documents.map((document) => {
               return (
                 <div key={document._id}>
@@ -105,13 +105,14 @@ const CheckListCard = (props) => {
               id="progress-bar"
               label={`${Math.ceil(docsPercentage)}%`}
             />
+            ;
           </Form.Group>
         </Form>
         <Form className="steps-checklist">
           <Form.Group>
-            <h2 className="checklist-header">
+            <h1 className="checklist-header">
               Necessary steps for {checkList.category}:
-            </h2>
+            </h1>
             {checkList.steps.map((step) => {
               return (
                 <div key={step._id}>
@@ -138,7 +139,13 @@ const CheckListCard = (props) => {
               label={`${Math.ceil(stepsPercentage)}%`}
             />
           </Form.Group>
-          <img src={CheckListImg} alt="Logo" width="400" height="400" />
+          <img
+            src={CheckListImg}
+            className="checklist-img"
+            alt="Logo"
+            width="500"
+            height="500"
+          />
         </Form>
       </Container>
     </>

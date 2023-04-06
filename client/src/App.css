@@ -359,10 +359,10 @@ body {
   margin: 5rem;
   padding: 0rem;
   border: 1px solid #ccc;
-  flex-basis: 300px;
-  align-items: center;
+  flex-basis: 350px;
   flex-wrap: wrap;
   display: flex;
+  border-color: none;
 }
 
 .card-title {
@@ -387,7 +387,6 @@ body {
 .card-body {
   background-color: #f96632;
   border: 0;
-  border-radius: 20px;
 }
 
 .card button {
@@ -422,6 +421,15 @@ body {
 }
 
 /* styling for categories */
+#category-card {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 10px;
+}
+
 .category-con {
   display: flex;
   flex-wrap: wrap;

@@ -32,7 +32,7 @@ const Categories = () => {
         </div>
         <div className="category-con">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-4" id="category-card">
               <Card className="custom-card">
                 <Card.Body>
                   <img
@@ -51,7 +51,7 @@ const Categories = () => {
                 </Card.Body>
               </Card>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4" id="category-card">
               <Card className="custom-card">
                 <Card.Body>
                   <img
@@ -69,7 +69,7 @@ const Categories = () => {
                 </Card.Body>
               </Card>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4" id="category-card">
               <Card className="custom-card">
                 <Card.Body>
                   <img
@@ -87,7 +87,7 @@ const Categories = () => {
                 </Card.Body>
               </Card>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4" id="category-card">
               <Card className="custom-card">
                 <Card.Body>
                   <Card.Title className="card-title">
@@ -110,7 +110,7 @@ const Categories = () => {
                 </Card.Body>
               </Card>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4" id="category-card">
               <Card className="custom-card">
                 <Card.Body>
                   <Card.Title className="card-title">Study Visa </Card.Title>
@@ -131,7 +131,7 @@ const Categories = () => {
                 </Card.Body>
               </Card>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4" id="category-card">
               <Card className="custom card">
                 <Card.Body>
                   <Card.Title className="card-title">Working Visa</Card.Title>

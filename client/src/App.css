@@ -316,18 +316,24 @@ body {
 /* Card Styling */
 .card-container {
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
-  font-display: flex;
+  display: flex;
+  
 }
 
 .card {
   max-width: 350px;
   height: 400px;
-  margin: 50px;
+  margin: 5rem;
   padding: 0rem;
   border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
+  flex-basis: 300px;
+ align-items: center;
+ flex-wrap: wrap;
+ 
 }
 
 .card-title {
@@ -579,9 +585,6 @@ footer h4 {
 }
 /* Footer */
 
-.about-image{
-
-}
 /* contact form */
 
 .text-center-button {
@@ -600,7 +603,7 @@ footer h4 {
   transition: all 0.3s ease 0s;
 }
 .text-center-button:hover {
-  background-color: #ff5757;
+  background-color: #f96632;
   color: #fcf3eb;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);

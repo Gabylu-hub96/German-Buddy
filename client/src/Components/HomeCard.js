@@ -7,7 +7,7 @@ const HomeCard = () => {
   return (
     <div className="home-container">
       <p className="card-text">
-        <b>Explore our website and Services</b>
+        <b>Explore Our Website and Services</b>
       </p>
       <div className="row">
         <div className="col-md-4">

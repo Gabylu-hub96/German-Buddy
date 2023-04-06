@@ -27,7 +27,7 @@ const Footer = () => {
               <Form.Control
                 placeholder="Email address"
                 aria-label="Email address"
-                aria-describedby="basic-addon2"
+                aria-described by="basic-addon2"
               />
               <Button
                 variant="btn btn-warning"
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
 
           <div className="col-lg-4 col-md-8 col-xs-12 mb-3">
-            <h4>Stay Connected</h4>
+            <h4>STAY CONNECTED</h4>
             <ul className="nav flex-column">
               <li className="nav-item mb-2">+49 089 174 433</li>
               <li className="nav-item mb-2">team@germanbuddy.de</li>

@@ -163,8 +163,10 @@ body {
 
 .register-form-container,
 .login-form-container {
-  padding: 80px;
-  margin: 80px;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .form-input-content,
 .login-left-container {
@@ -178,7 +180,7 @@ body {
 .form-right-container {
   background-image: url(./Images/register-form-img.jpg);
   background-position: center;
-  width: 50%;
+  width: 60%;
   background-size: cover;
 }
 
@@ -189,10 +191,12 @@ body {
   background-color: #f96632;
   box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
   border-radius: 15px;
+  width: 60%;
 }
 .form-label {
   font-weight: bolder;
-  margin: 10px;
+  margin: 15px;
+  margin-bottom: 5px;
 }
 .login-left-container {
   display: flex;
@@ -204,8 +208,8 @@ body {
   background-image: url(./Images/Login-form-img.png);
   background-color: #fefcff;
   background-position: center;
-  width: 50%;
   background-size: cover;
+  width: 50%;
 }
 
 #register-form-bttn,

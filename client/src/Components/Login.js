@@ -30,9 +30,9 @@ function Login({ setIsLoggedin }) {
   return (
     <Form onSubmit={handleSubmit} className="login-form-container">
       <Form.Group
-        className="mb-3"
         controlId="login-form"
-        id="login-form-content">
+        id="login-form-content"
+        className="mb-3">
         <div className="login-left-container">
           <Form.Label className="form-label">Email:</Form.Label>
           <Form.Control

@@ -27,13 +27,13 @@ const Footer = () => {
               <Form.Control
                 placeholder="Email address"
                 aria-label="Email address"
-                aria-described by="basic-addon2"
+                aria-described
+                by="basic-addon2"
               />
               <Button
                 variant="btn btn-warning"
                 color="#ff5757"
-                type="subscribe"
-              >
+                type="subscribe">
                 Subscribe
               </Button>
             </InputGroup>

@@ -19,7 +19,9 @@ const HomeCard = () => {
                 Monday to Friday with anything you might need!{" "}
               </Card.Text>
               <NavLink className="nav-link" to={"/categories"}>
-                <Button variant="primary">Learn More</Button>
+                <Button variant="primary" id="home-card-bttn">
+                  Learn More
+                </Button>
               </NavLink>
             </Card.Body>
           </Card>
@@ -34,7 +36,9 @@ const HomeCard = () => {
                 Always stay connected through our community tab and talk to
                 people that were in your shoes before
               </Card.Text>
-              <Button variant="primary">Learn More</Button>
+              <Button variant="primary" id="home-card-bttn">
+                Learn More
+              </Button>
             </Card.Body>
           </Card>
         </div>
@@ -48,7 +52,10 @@ const HomeCard = () => {
                 Explore our bite-sized articles about living abroad with some of
                 the most important information
               </Card.Text>
-              <Button className="card-button" variant="primary">
+              <Button
+                className="card-button"
+                variant="primary"
+                id="home-card-bttn">
                 Learn More
               </Button>
             </Card.Body>

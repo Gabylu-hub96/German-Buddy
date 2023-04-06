@@ -4,7 +4,6 @@ import Image from "../Images/bgshape.png";
 import { Container, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-
 const HeaderContainer = () => {
   return (
     <div className="text-con">

@@ -82,9 +82,8 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
-  margin: 20px;
-  margin-top: 5px;
+  margin: 25px;
+  margin-top: 45px;
 }
 .user-icon {
   padding: 15px;
@@ -435,11 +434,13 @@ body {
 /* about ends */
 
 /* Checklist */
+
 .checklist-header {
   margin: 20px;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.638);
   font-weight: bold;
   color: #fefcff;
+  padding: 5px;
 }
 .checklists {
   display: flex;
@@ -449,7 +450,8 @@ body {
   align-items: baseline;
   gap: 40px;
   padding: 10px;
-  margin: 10px;
+  height: 145vh;
+  margin-top: 80px;
 }
 .docs-checklist,
 .steps-checklist {
@@ -529,7 +531,7 @@ input[type="checkbox"]:disabled {
   font-size: larger;
   font-weight: bold;
   height: 4vh;
-  margin: 90px;
+  margin: 80px;
   width: 77%;
   margin-top: 35px;
 }

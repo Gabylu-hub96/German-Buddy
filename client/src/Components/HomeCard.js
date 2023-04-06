@@ -10,7 +10,7 @@ const HomeCard = () => {
         <b>Explore Our Website and Services</b>
       </p>
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-4" id="category-card">
           <Card className="custom-card">
             <Card.Body>
               <Card.Title className="card-title">German Bureaucracy</Card.Title>
@@ -26,7 +26,7 @@ const HomeCard = () => {
             </Card.Body>
           </Card>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4" id="category-card">
           <Card className="custom-card">
             <Card.Body>
               <Card.Title className="card-title">
@@ -42,7 +42,7 @@ const HomeCard = () => {
             </Card.Body>
           </Card>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4" id="category-card">
           <Card className="custom card">
             <Card.Body>
               <Card.Title className="card-title">

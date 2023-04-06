@@ -427,6 +427,7 @@ body {
   justify-content: center;
   flex-wrap: nowrap;
   flex-direction: row;
+  padding: 10px;
 }
 
 .category-con {

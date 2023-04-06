@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import kimsandra from "../Images/sandra.png";
+import Kimsandra from "../Images/Sandra.png";
 import Gabriela from "../Images/gabriela.png";
 import ReactPlayer from "react-player";
 import Card from "react-bootstrap/Card";
@@ -32,8 +32,7 @@ function AboutPage() {
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+          allowfullscreen></iframe>
       </div>
       <div className="text-container">
         <p>
@@ -65,7 +64,7 @@ function AboutPage() {
       <div className="about-image">
         <div className="row">
           <div className="col-md-4">
-            <img src={kimsandra} alt="Kimsandra" className="thumbnail" />
+            <img src={Kimsandra} alt="Kimsandra" className="thumbnail" />
             <p className="names">
               <b>KIMSANDRA</b>
             </p>

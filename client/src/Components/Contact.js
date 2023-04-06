@@ -130,7 +130,7 @@ function Contact() {
                 </div>
                 <br />
 
-                <div className="text-center-button" variant="primary">
+                <div className="text-center-button">
                   <button type="submit">Send Message</button>
                 </div>
                 <br />

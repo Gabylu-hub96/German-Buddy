@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import kimsandra from "../Images/sandra.jpeg";
-import Gabriela from "../Images/gabriela.jpeg";
+import kimsandra from "../Images/sandra.png";
+import Gabriela from "../Images/gabriela.png";
 import ReactPlayer from "react-player";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -13,7 +13,7 @@ function AboutPage() {
       <p className="card-text">
         <b>About German Buddy</b>
       </p>
-      <div className="text-container">
+      <div className="text-container callout">
         <p>
           <b>
             Welcome to German Buddy. We are Students from WBS Coding School, and
@@ -35,7 +35,7 @@ function AboutPage() {
           allowfullscreen
         ></iframe>
       </div>
-      <div className="about-container">
+      <div className="text-container">
         <p>
           <b>
             Our mission is to make your life easier by providing you with a
@@ -61,6 +61,7 @@ function AboutPage() {
           </b>
         </p>
       </div>
+      <br />
       <div className="about-image">
         <div className="row">
           <div className="col-md-4">
@@ -73,7 +74,7 @@ function AboutPage() {
         <div className="">
           <img src={Gabriela} alt="Gabriela" className="thumbnail" />
           <p className="names">
-            <b>GaABRIELA</b>
+            <b>GABRIELA</b>
           </p>
         </div>
       </div>

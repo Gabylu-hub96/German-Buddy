@@ -574,10 +574,14 @@ footer h4 {
   color: #f96632;
 }
 
-.footer-link:hover{
+.footer-link:hover {
   color: #ffab07;
 }
 /* Footer */
+
+.about-image{
+
+}
 /* contact form */
 
 .text-center-button {

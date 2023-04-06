@@ -10,7 +10,7 @@ const HeaderContainer = () => {
         <img src={Logo} alt="Logo" className="d-inline-block" />
         <p> We help make your settling in Germany uncomplicated.</p>
         <NavLink className="nav-link" to={"/categories"}>
-          <button>FIND OUR MORE</button>
+          <button>FIND OUT MORE</button>
         </NavLink>
       </div>
       <div className="image-container">

@@ -9,7 +9,7 @@ const Categories = () => {
     <div className="home-container">
       <div className="row-md-4">
         <p className="card-text">
-          <b>Explore our main categories</b>
+          <b>Explore Our Main Categories</b>
         </p>
         <div className="text-container">
           <p>

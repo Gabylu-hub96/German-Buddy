@@ -40,7 +40,7 @@ function AboutPage() {
           <b>
             Our mission is to make your life easier by providing you with a
             user-friendly platform that helps you accomplish your goals while
-            you plaan to relocate to Germany. We believe that technology should
+            you plan to relocate to Germany. We believe that technology should
             be accessible to everyone, and that's why we've designed our
             application to be intuitive, efficient, and reliable. We are
             dedicated professionals who are passionate about creating software
@@ -51,7 +51,7 @@ function AboutPage() {
             responsive, and always available when you need it. We've also made
             sure that our application is secure, so you can trust that your data
             is protected at all times. Whether you're a professional, a student,
-            or just spouse looking to relocate to Germany, our application is
+            or just a kith looking to relocate to Germany, our application is
             here to help. We've designed it to be flexible and adaptable, so it
             can meet your unique needs and help you achieve your goals. So why
             not give our application a try? We're confident that you'll love it
@@ -64,17 +64,17 @@ function AboutPage() {
       <br />
       <div className="about-image">
         <div className="row">
-          <div className="col-md-4">
-            <img src={kimsandra} alt="Kimsandra" className="thumbnail" />
+          <div className="">
+            <img src={Gabriela} alt="Gabriela" className="thumbnail" />
             <p className="names">
-              <b>KIMSANDRA</b>
+              <b>GABRIELA</b>
             </p>
           </div>
         </div>
-        <div className="">
-          <img src={Gabriela} alt="Gabriela" className="thumbnail" />
+        <div className="col-md-4">
+          <img src={kimsandra} alt="Kimsandra" className="thumbnail" />
           <p className="names">
-            <b>GABRIELA</b>
+            <b>KIMSANDRA</b>
           </p>
         </div>
       </div>

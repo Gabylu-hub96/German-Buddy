@@ -579,8 +579,7 @@ footer h4 {
 }
 /* Footer */
 
-.about-image{
-
+.about-image {
 }
 /* contact form */
 
@@ -600,7 +599,7 @@ footer h4 {
   transition: all 0.3s ease 0s;
 }
 .text-center-button:hover {
-  background-color: #ff5757;
+  background-color: #f96632;
   color: #fcf3eb;
   box-shadow: 0px 10px 15px rgba(229, 46, 95, 0.4);
   transform: translateY(-7px);

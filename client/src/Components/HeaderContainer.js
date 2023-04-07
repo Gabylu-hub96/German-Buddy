@@ -9,8 +9,19 @@ const HeaderContainer = () => {
     <div className="text-con">
       <Container fluid id="header-left-container">
         <div className="left-column">
-          <img src={Logo} alt="Logo" className="d-inline-block" />
-          <p>We help make your settling in Germany uncomplicated.</p>
+          <div className="col-lg-4 col-md-8 col-xs-12 mb-3">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="d-inline-block"
+              id="header-logo"
+            />
+            <div
+              className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 align-items-center"
+              id="left-column-p">
+              We help make your settling in Germany uncomplicated.
+            </div>
+          </div>
           <Button>FIND OUT MORE</Button>
         </div>
       </Container>

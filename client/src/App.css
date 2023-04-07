@@ -284,7 +284,7 @@ body {
 }
 
 .left-column img {
-  width: 40%;
+  width: 100%;
   height: auto;
   margin: 0rem;
   padding: 0rem;
@@ -292,20 +292,17 @@ body {
   display: flex;
 }
 
-.left-column p {
+#left-column-p {
   color: #b20d0d;
   font-weight: bolder;
-  font-size: x-large;
-  margin-top: -60px;
-  margin-bottom: 10px;
-  padding: 6px;
+  font-size: larger;
 }
 
 .left-column button {
   background: black;
   color: #fcf3eb;
   letter-spacing: 2px;
-  margin: 10px auto;
+  margin: 10px auto 30px auto;
   text-align: center;
   border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
@@ -332,9 +329,10 @@ body {
   margin-left: 5rem;
   width: 60%;
   padding-left: 10px;
+  margin-right: 50px;
 }
 
-.image-container {
+/* .image-container {
   background-image: url(./Images/bgshape.png);
   background-position: center;
   background-size: cover;
@@ -343,7 +341,7 @@ body {
   align-self: auto;
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 /* Card Styling */
 .card-container {

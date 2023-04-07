@@ -574,12 +574,41 @@ input[type="checkbox"]:disabled {
 /* Checklist ends */
 
 /* User Page */
-.user-profile-card {
+.user-profile-container {
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+}
+#user-profile-card {
   background-color: #f96632;
   box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
   border-radius: 20px;
-  width: 45%;
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.user-page-h2 {
+  font-weight: bolder;
+  color: #fff;
+}
+.user-personal-info,
+.user-checklist-icon {
+  background-color: #ffffffba;
+  border-radius: 20px;
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
+}
+ul {
+  list-style-type: none;
 }
 
 /* User Page ends */

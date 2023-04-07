@@ -53,7 +53,7 @@ function Register({ setIsLoggedin }) {
   return (
     <Form onSubmit={handleSubmit} className="register-form-container">
       <Form.Group
-        className="mb-3"
+        className="form-left-container mb-3"
         controlId="register-form"
         id="register-form-content">
         <div className="form-input-content">

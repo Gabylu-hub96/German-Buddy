@@ -194,9 +194,10 @@ Collapse {
   margin: 40px;
   width: 50%;
 }
+
 .form-right-container {
   background-image: url(./Images/register-form-img.jpg);
-  background-position: center;
+  background-position: left;
   width: 60%;
   background-size: cover;
 }
@@ -463,7 +464,7 @@ Collapse {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  flex: 1 0 30%; /* adjust as needed */
+  flex: 1 0 30%;
   overflow: hidden;
 }
 
@@ -703,9 +704,4 @@ footer h4 {
   margin-bottom: 20px;
   font-size: 14px;
   color: #f96632;
-}
-
-.leaflet-container {
-  height: 500px;
-  width: 100%;
 }

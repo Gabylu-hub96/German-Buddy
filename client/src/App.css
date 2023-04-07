@@ -104,6 +104,7 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin: 30px;
 }
 
 #login-bttn,
@@ -571,6 +572,17 @@ input[type="checkbox"]:disabled {
 }
 
 /* Checklist ends */
+
+/* User Page */
+.user-profile-card {
+  background-color: #f96632;
+  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
+  border-radius: 20px;
+  width: 45%;
+  margin-left: 20px;
+}
+
+/* User Page ends */
 
 /* Footer */
 .footer {

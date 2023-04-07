@@ -112,6 +112,7 @@ Collapse {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin: 30px;
 }
 
 #login-bttn,
@@ -291,7 +292,7 @@ Collapse {
 }
 
 .left-column img {
-  width: 40%;
+  width: 100%;
   height: auto;
   margin: 0rem;
   padding: 0rem;
@@ -299,20 +300,17 @@ Collapse {
   display: flex;
 }
 
-.left-column p {
+#left-column-p {
   color: #b20d0d;
   font-weight: bolder;
-  font-size: x-large;
-  margin-top: -60px;
-  margin-bottom: 10px;
-  padding: 6px;
+  font-size: larger;
 }
 
 .left-column button {
   background: black;
   color: #fcf3eb;
   letter-spacing: 2px;
-  margin: 10px auto;
+  margin: 10px auto 30px auto;
   text-align: center;
   border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
@@ -339,9 +337,10 @@ Collapse {
   margin-left: 5rem;
   width: 60%;
   padding-left: 10px;
+  margin-right: 50px;
 }
 
-.image-container {
+/* .image-container {
   background-image: url(./Images/bgshape.png);
   background-position: center;
   background-size: cover;
@@ -350,7 +349,7 @@ Collapse {
   align-self: auto;
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 /* Card Styling */
 .card-container {
@@ -580,6 +579,17 @@ input[type="checkbox"]:disabled {
 }
 
 /* Checklist ends */
+
+/* User Page */
+.user-profile-card {
+  background-color: #f96632;
+  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
+  border-radius: 20px;
+  width: 45%;
+  margin-left: 20px;
+}
+
+/* User Page ends */
 
 /* Footer */
 .footer {

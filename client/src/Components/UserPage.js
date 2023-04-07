@@ -10,6 +10,8 @@ import LogoutIcon from "../Images/logout.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Home from "./Home";
+import Button from "react-bootstrap/Button";
 
 const MyProfile = ({ isLoggedin, setIsLoggedin }) => {
   const [user, setUser] = useState(null);
@@ -33,7 +35,13 @@ const MyProfile = ({ isLoggedin, setIsLoggedin }) => {
   return (
     <>
       {user ? (
-        <Container fluid className="user-profile-card">
+        <Container fluid className="user-profile-container">
+          <Row className="user-profile-card">
+            <h3>My personal information:</h3>
+            <Col>{user.userName}</Col>
+            <Col>{user.userName}</Col>
+            <Col>{user.userName}</Col>
+          </Row>
           <Row>
             <Col>
               <LinkContainer to="/myChecklists">
@@ -52,7 +60,7 @@ const MyProfile = ({ isLoggedin, setIsLoggedin }) => {
           </Row>
           <Row>
             <Col>
-              <button onClick={handleLogout}>
+              <Button onClick={handleLogout}>
                 <img
                   src={LogoutIcon}
                   alt="user"
@@ -60,7 +68,7 @@ const MyProfile = ({ isLoggedin, setIsLoggedin }) => {
                   height="50"
                   className="d-inline-block align-top"
                 />
-              </button>
+              </Button>
             </Col>
             <Row>
               <Col>
@@ -70,14 +78,7 @@ const MyProfile = ({ isLoggedin, setIsLoggedin }) => {
           </Row>
         </Container>
       ) : (
-        <div className="header-user">
-          <NavLink className="nav-link" id="login-bttn" to={"/login"}>
-            Login
-          </NavLink>
-          <NavLink className="nav-link" id="register-bttn" to={"/register"}>
-            Register
-          </NavLink>
-        </div>
+        <Home />
       )}
     </>
   );

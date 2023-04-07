@@ -25,6 +25,9 @@ body {
 }
 
 /* Navbar*/
+.navbar-toggler-icon{
+  color: white;
+}
 
 .my-navbar-container {
   background-color: #000000;
@@ -67,11 +70,15 @@ body {
   left: 0;
   width: 0;
   height: 3px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out white;
 }
 
 .nav-link-item:hover {
   background-position: 0;
+}
+
+Collapse{
+  color: white;
 }
 
 .nav-link-item:hover::before {
@@ -84,6 +91,7 @@ body {
   align-items: center;
   margin: 25px;
   margin-top: 45px;
+  color: #fcf3eb;
 }
 .user-icon {
   padding: 15px;
@@ -662,7 +670,7 @@ footer h4 {
   justify-self: flex-end;
 }
 
-/* form {
+.php-email-form{
   width: 80%;
   padding: 20px;
   border-radius: 6px;
@@ -670,7 +678,7 @@ footer h4 {
   border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
   margin-bottom: 5rem;
-} */
+} 
 
 .contact .info i {
   font-size: 20px;
@@ -699,6 +707,27 @@ footer h4 {
   color: #f96632;
 }
 
-.contact .info .email p {
-  padding-top: 5px;
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.leaflet-container {
+  height: 500px;
+  width: 100%;
 }

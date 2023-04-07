@@ -58,17 +58,6 @@ function Contact() {
                   <h4>Call:</h4>
                   <p>+49 089 174 433</p>
                 </div>
-                <MapContainer
-                  center={position}
-                  zoom={16}
-                  scrollWheelZoom={true}>
-                  <TileLayer url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=LjeASTEOm5W62yk97NZq" />
-                  <Marker position={position} icon={markerIcon}>
-                    <Popup>
-                      Lorenzweg 5, 12099 Berlin <br /> WBS Coding School.
-                    </Popup>
-                  </Marker>
-                </MapContainer>
               </div>
             </div>
 
@@ -77,7 +66,8 @@ function Contact() {
                 action="forms/contact.php"
                 method="post"
                 role="form"
-                className="php-email-form">
+                className="php-email-form"
+              >
                 <div className="row">
                   <div className="form-group">
                     <label htmlFor="name">
@@ -124,8 +114,10 @@ function Contact() {
                     className="form-control"
                     name="message"
                     rows="10"
-                    required></textarea>
+                    required
+                  ></textarea>
                 </div>
+
                 <br />
                 <Button type="submit" id="contact-form-bttn">
                   Send Message

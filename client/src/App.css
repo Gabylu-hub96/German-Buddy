@@ -198,6 +198,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 80%;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.register-form-container {
+  max-width: 100%;
+  gap: 5px;
 }
 .form-input-content,
 .login-left-container {
@@ -209,9 +217,26 @@ body {
 
 .form-right-container {
   background-image: url(./Images/register-form-img.jpg);
-  background-position: left;
-  width: 60%;
+  background-color: #fefcff;
+  background-position: center;
   background-size: cover;
+  width: 50%;
+  flex-wrap: wrap;
+  position: center;
+  margin-top: 6rem;
+  overflow: hidden;
+}
+
+.form-left-container {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  margin-left: 5rem;
+}
+
+@media screen and (max-width: 759px) {
+  register-form-container {
+    width: 32.33% !important;
+  }
 }
 
 #register-form-content,
@@ -221,7 +246,7 @@ body {
   background-color: #f96632;
   box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
   border-radius: 15px;
-  width: 60%;
+  width: 80%;
 }
 .form-label {
   font-weight: bolder;
@@ -245,6 +270,7 @@ body {
 #register-form-bttn,
 #login-form-bttn {
   margin-top: 35px;
+  margin-bottom: 10rem;
 }
 /* Search ends */
 
@@ -482,6 +508,23 @@ body {
   overflow: hidden;
 }
 
+.about-text-container {
+  display: flex;
+  background-color: #f96632;
+  max-width: 100%;
+  border: 2px solid #000000;
+  box-shadow: 0 0 5px #ccc;
+  color: rgb(255, 255, 255);
+  padding-top: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  font-size: 30px;
+  border-radius: 5px;
+  font-style: italic;
+  word-wrap: wrap;
+  font-weight: lighter;
+}
 .about-title {
   font-weight: bolder;
 }

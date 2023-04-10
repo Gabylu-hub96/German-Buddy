@@ -169,9 +169,11 @@ function Register({ setIsLoggedin }) {
               value={user.confirmPassword}
               onChange={handleChange}
             />
+            <br />
             <Button type="submit" id="register-form-bttn">
               Register
             </Button>
+            <br />
           </div>
         </div>
         <div className="form-right-container"></div>

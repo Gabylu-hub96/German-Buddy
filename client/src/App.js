@@ -28,6 +28,7 @@ function App() {
           path="/register"
           element={<Register setIsLoggedin={setIsLoggedin} />}
         />
+        
         <Route path="/myProfile" element={<MyProfile />} />
         <Route path="/about" element={<About />} />
         <Route path="/categories" element={<Categories />} />

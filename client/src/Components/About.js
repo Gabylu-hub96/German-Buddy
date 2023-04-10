@@ -13,7 +13,7 @@ function AboutPage() {
       <p className="card-text">
         <b>About German Buddy</b>
       </p>
-      <div className="text-container callout">
+      <div className="about-text-container callout">
         <p>
           <b>
             Welcome to German Buddy. We are Students from WBS Coding School, and

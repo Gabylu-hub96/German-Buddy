@@ -16,6 +16,9 @@
 
 body {
   font-family: var(--font-raleway);
+  box-sizing: border-box;
+  line-height: 1.2em;
+  font-weight: 400;
 }
 
 .App {
@@ -75,14 +78,16 @@ body {
 
 .nav-link-item:hover {
   background-position: 0;
+  transition: 0.5s;
 }
 
-Collapse {
+.Collapse {
   color: white;
 }
 
 .nav-link-item:hover::before {
   width: 100%;
+  transition: 0.5s;
 }
 
 .navbar-brand {
@@ -93,6 +98,12 @@ Collapse {
   margin-top: 45px;
   color: #fcf3eb;
 }
+
+.navbar-toggler-icon {
+  color: #ccc;
+  background-color: #fefcff;
+}
+
 .user-icon {
   padding: 15px;
   margin: 15px;
@@ -281,6 +292,7 @@ Collapse {
 #header-left-container {
   width: 50%;
 }
+
 .left-column {
   flex: 1;
   flex-wrap: wrap;
@@ -296,14 +308,17 @@ Collapse {
   height: auto;
   margin: 0rem;
   padding: 0rem;
-  margin-bottom: -5rem;
-  display: flex;
+  overflow: hidden;
 }
 
 #left-column-p {
   color: #b20d0d;
   font-weight: bolder;
   font-size: larger;
+  padding: 0.75rem;
+  align-self: auto;
+  font-style: italic;
+  margin-top: -5rem;
 }
 
 .left-column button {
@@ -322,6 +337,7 @@ Collapse {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  margin-top: -2rem;
 }
 
 .left-column button:hover {
@@ -336,7 +352,6 @@ Collapse {
   justify-self: auto;
   margin-left: 5rem;
   width: 60%;
-  padding-left: 10px;
   margin-right: 50px;
 }
 

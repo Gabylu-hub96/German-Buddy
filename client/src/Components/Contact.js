@@ -25,7 +25,7 @@ function Contact() {
           <b>
             Feel free to reach out to us via the various forms of communication
             such as phone calls, emails, text messages, or even through our
-            social media platforms and direct messages. This is oe way we
+            social media platforms and direct messages. This is only way we
             believe we can not only improve our services but also connect with
             users, who are either contacting for help or support. A way to also
             share information, or simply give feedback on user satisfaction.

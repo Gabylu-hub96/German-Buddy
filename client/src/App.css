@@ -16,6 +16,9 @@
 
 body {
   font-family: var(--font-raleway);
+  box-sizing: border-box;
+  line-height: 1.2em;
+  font-weight: 400;
 }
 
 .App {
@@ -75,14 +78,16 @@ body {
 
 .nav-link-item:hover {
   background-position: 0;
+  transition: 0.5s;
 }
 
-Collapse {
+.Collapse {
   color: white;
 }
 
 .nav-link-item:hover::before {
   width: 100%;
+  transition: 0.5s;
 }
 
 .navbar-brand {
@@ -93,6 +98,12 @@ Collapse {
   margin-top: 45px;
   color: #fcf3eb;
 }
+
+.navbar-toggler-icon {
+  color: #ccc;
+  background-color: #fefcff;
+}
+
 .user-icon {
   padding: 15px;
   margin: 15px;
@@ -281,6 +292,7 @@ Collapse {
 #header-left-container {
   width: 50%;
 }
+
 .left-column {
   flex: 1;
   flex-wrap: wrap;
@@ -296,14 +308,13 @@ Collapse {
   height: auto;
   margin: 0rem;
   padding: 0rem;
-  margin-bottom: -5rem;
-  display: flex;
 }
 
 #left-column-p {
   color: #b20d0d;
   font-weight: bolder;
   font-size: larger;
+  padding: 2rem;
 }
 
 .left-column button {

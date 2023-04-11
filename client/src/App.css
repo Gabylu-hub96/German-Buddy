@@ -491,6 +491,7 @@ body {
 .custom-card {
   flex: 1 0 30%;
   overflow: hidden;
+  font-weight: bold;
 }
 
 /* about */
@@ -639,73 +640,12 @@ input[type="checkbox"]:disabled {
 /* Checklist ends */
 
 /* User Page */
-.user-profile-container {
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  margin: 100px;
-  display: flex;
-  flex-direction: column;
-}
 .user-profile-card {
   background-color: #f96632;
   box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
   border-radius: 20px;
+  width: 45%;
   margin-left: 20px;
-  display: flex;
-  padding: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-direction: column;
-}
-#user-card-top {
-  width: 80%;
-  padding: 20px;
-}
-#user-checklist-icon {
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 50%;
-}
-#user-profile-text {
-  width: 100%;
-}
-.user-page-h2 {
-  font-weight: bolder;
-  color: #fff;
-}
-.user-personal-info,
-.checkList-icon {
-  background-color: #ffffffba;
-  border-radius: 20px;
-  width: 100%;
-  padding: 20px;
-  margin: 10px;
-  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
-}
-#my-checklist-card {
-  padding: 25px;
-}
-ul {
-  list-style-type: none;
-  font-size: x-large;
-}
-li {
-  font-weight: bold;
-}
-#my-checklist-p {
-  font-size: x-large;
-  font-weight: bold;
-}
-#logout-icon-bttn {
-  background-color: transparent;
-  border-color: transparent;
-  margin: 20px;
-  padding: 20px;
 }
 
 /* User Page ends */

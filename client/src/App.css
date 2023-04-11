@@ -194,7 +194,6 @@ body {
 
 .register-form-container,
 .login-form-container {
-  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,10 +202,6 @@ body {
   margin-top: 5rem;
 }
 
-.register-form-container {
-  max-width: 100%;
-  gap: 5px;
-}
 .form-input-content,
 .login-left-container {
   display: flex;
@@ -224,18 +219,21 @@ body {
   flex-wrap: wrap;
   position: center;
   margin-top: 6rem;
-  overflow: hidden;
 }
 
-.form-left-container {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
-  margin-left: 5rem;
-}
-
-@media screen and (max-width: 759px) {
-  register-form-container {
-    width: 32.33% !important;
+@media screen and (max-width: 768px) and (max-width: 1023px) {
+  .form-left-container {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+  }
+  .form-input-content {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+  }
+  .form-right-container {
+    display: none;
   }
 }
 

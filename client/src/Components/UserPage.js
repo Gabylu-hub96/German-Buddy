@@ -35,10 +35,10 @@ const MyProfile = ({ isLoggedin, setIsLoggedin }) => {
       {user ? (
         <Container className="user-profile-container">
           <Row>
-            <Col lg={true} xs={12} md={6}>
+            <Col lg={true}>
               <Container className="user-profile-card">
                 <Row id="user-card-top">
-                  <Col lg={true} xs={12} md={4} id="user-profile-text">
+                  <Col lg={true} id="user-profile-text">
                     <h2 className="user-page-h2">My personal information:</h2>
                     <div className="user-personal-info">
                       <ul id="user-card-ul">
@@ -51,7 +51,7 @@ const MyProfile = ({ isLoggedin, setIsLoggedin }) => {
                   </Col>
                 </Row>
                 <Row id="user-checklist-icon">
-                  <Col lg={true} xs={12} md={6}>
+                  <Col lg={true}>
                     <LinkContainer to="/myChecklists" id="my-checklist-card">
                       <Nav.Link className="checkList-icon">
                         <p id="my-checklist-p">My Checklist</p>
@@ -67,7 +67,7 @@ const MyProfile = ({ isLoggedin, setIsLoggedin }) => {
                   </Col>
                 </Row>
                 <Row>
-                  <Col lg={true} xs={12} md={6}>
+                  <Col lg={true}>
                     <Button onClick={handleLogout} id="logout-icon-bttn">
                       <img
                         src={LogoutIcon}

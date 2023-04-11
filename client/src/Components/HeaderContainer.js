@@ -22,7 +22,9 @@ const HeaderContainer = () => {
               We help make your settling in Germany uncomplicated.
             </div>
           </div>
-          <Button>FIND OUT MORE</Button>
+          <NavLink className="nav-link" to={"/register"}>
+            <Button>FIND OUT MORE</Button>
+          </NavLink>
         </div>
       </Container>
       <div className="image-container">

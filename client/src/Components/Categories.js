@@ -132,7 +132,7 @@ const Categories = () => {
               </Card>
             </div>
             <div className="col-md-4" id="category-card">
-              <Card className="custom card">
+              <Card className="custom-card">
                 <Card.Body>
                   <Card.Title className="card-title">Working Visa</Card.Title>
                   <Card.Text>

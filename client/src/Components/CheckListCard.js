@@ -124,7 +124,7 @@ const CheckListCard = (props) => {
               id="progress-bar"
               label={`${Math.ceil(docsPercentage)}%`}
             />
-            ;
+            ; ;
           </Form.Group>
         </Form>
         <Form className="steps-checklist">

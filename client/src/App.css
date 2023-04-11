@@ -683,6 +683,24 @@ input[type="checkbox"]:disabled {
   margin: 20px;
   padding: 20px;
 }
+@media screen and (max-width: 770px) and (max-width: 1023px) {
+  .user-personal-info,
+  .checkList-icon {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+  }
+  .user-personal-info,
+  .checkList-icon {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+  }
+  .user-personal-info,
+  .checkList-icon {
+    display: none;
+  }
+}
 
 /* User Page ends */
 

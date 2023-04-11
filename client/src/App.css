@@ -546,7 +546,6 @@ body {
   align-items: baseline;
   gap: 40px;
   padding: 10px;
-  height: 145vh;
   margin-top: 80px;
 }
 .docs-checklist,
@@ -627,12 +626,21 @@ input[type="checkbox"]:disabled {
   font-size: larger;
   font-weight: bold;
   height: 4vh;
-  margin: 80px;
-  width: 77%;
   margin-top: 35px;
+  margin-left: 100px;
+  width: 79%;
 }
 .checklist-img {
   margin-top: -90px;
+}
+.toast-container {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.toast-text {
+  color: #ffffff;
+  font-size: xx-large;
 }
 
 /* Checklist ends */

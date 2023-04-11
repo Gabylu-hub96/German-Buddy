@@ -5,10 +5,14 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import { Button, Card, Form, Container } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import CheckListImg from "../Images/checklist-img.png";
+import Toast from "react-bootstrap/Toast";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 const CheckListCard = (props) => {
   const navigate = useNavigate();
   const [checkList, setCheckList] = useState(props.checkList);
+  const [show, setShow] = useState(false);
   const [docsPercentage, setDocsPercentage] = useState(
     handleProgressBar(props.checkList.documents)
   );
@@ -30,7 +34,7 @@ const CheckListCard = (props) => {
         ...checkList,
         documents: newDocuments,
       })
-      .then((res) => console.log(res))
+      .then((res) => setShow(true))
       .catch((e) => console.log(e));
   };
 
@@ -57,7 +61,7 @@ const CheckListCard = (props) => {
         ...checkList,
         steps: newSteps,
       })
-      .then((res) => console.log(res))
+      .then((res) => setShow(true))
       .catch((e) => console.log(e));
   };
 
@@ -72,6 +76,21 @@ const CheckListCard = (props) => {
 
   return (
     <>
+      <Row>
+        <Col xs={12}>
+          <Toast
+            style={{ width: "100%" }}
+            bg="success"
+            onClose={() => setShow(false)}
+            show={show}
+            delay={3000}
+            autohide>
+            <Toast.Body className="toast-text">
+              🤗Woohoo, you updated your checklist!🥳
+            </Toast.Body>
+          </Toast>
+        </Col>
+      </Row>
       <Container fluid className="checklists">
         <Form className="docs-checklist">
           <Form.Group>

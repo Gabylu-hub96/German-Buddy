@@ -640,12 +640,42 @@ input[type="checkbox"]:disabled {
 /* Checklist ends */
 
 /* User Page */
-.user-profile-card {
-  background-color: #f96632;
-  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
+
+#user-profile-text {
+  width: 100%;
+}
+.user-page-h2 {
+  font-weight: bolder;
+  color: #000000;
+}
+.user-personal-info,
+.checkList-icon {
+  background-color: #ffffffba;
   border-radius: 20px;
-  width: 45%;
-  margin-left: 20px;
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 10px 5px 5px rgba(10, 10, 10, 0.681);
+}
+#my-checklist-card {
+  padding: 25px;
+}
+#user-card-ul {
+  list-style-type: none;
+  font-size: x-large;
+}
+#user-card-il {
+  font-weight: bold;
+}
+#my-checklist-p {
+  font-size: x-large;
+  font-weight: bold;
+}
+#logout-icon-bttn {
+  background-color: transparent;
+  border-color: transparent;
+  margin: 20px;
+  padding: 20px;
 }
 
 /* User Page ends */

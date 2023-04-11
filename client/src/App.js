@@ -1,6 +1,5 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ThemeProvider from "react-bootstrap/ThemeProvider";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
@@ -17,30 +16,26 @@ import MyProfile from "./Components/UserPage";
 function App() {
   const [isLoggedin, setIsLoggedin] = useState(false);
   return (
-    <ThemeProvider
-      breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
-      minBreakpoint="xxs">
-      <div className="App">
-        <MyNavbar isLoggedin={isLoggedin} setIsLoggedin={setIsLoggedin} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/login"
-            element={<Login setIsLoggedin={setIsLoggedin} />}
-          />
-          <Route
-            path="/register"
-            element={<Register setIsLoggedin={setIsLoggedin} />}
-          />
-          <Route path="/myProfile" element={<MyProfile />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/categories" element={<Categories />} />
-          <Route path="/myChecklists" element={<MyCheckLists />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="App">
+      <MyNavbar isLoggedin={isLoggedin} setIsLoggedin={setIsLoggedin} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/login"
+          element={<Login setIsLoggedin={setIsLoggedin} />}
+        />
+        <Route
+          path="/register"
+          element={<Register setIsLoggedin={setIsLoggedin} />}
+        />
+        <Route path="/myProfile" element={<MyProfile />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/myChecklists" element={<MyCheckLists />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

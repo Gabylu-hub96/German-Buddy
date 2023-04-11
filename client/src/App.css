@@ -628,9 +628,9 @@ input[type="checkbox"]:disabled {
   font-size: larger;
   font-weight: bold;
   height: 4vh;
-  margin: 80px;
-  width: 77%;
   margin-top: 35px;
+  margin-left: 100px;
+  width: 79%;
 }
 .checklist-img {
   margin-top: -90px;
